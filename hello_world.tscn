@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b3cn70re86q6a"]
+
+[node name="Hello World" type="Node2D"]
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
+title = "Hello World!"
+initial_position = 1
+visible = true
+ok_button_text = "Hello"
+dialog_text = "Hello World!"
+dialog_hide_on_ok = false
+cancel_button_text = "Goodbye"
