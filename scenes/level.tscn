@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://exm1vyysobw5"]
+
+[ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
+
+[node name="Level" type="Node2D"]
+
+[node name="AlgorithmMenu" parent="." instance=ExtResource("1_2q6dc")]
