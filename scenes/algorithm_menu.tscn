@@ -6,25 +6,25 @@
 script = ExtResource("1_hi5xi")
 
 [node name="Button1" type="Button" parent="."]
-offset_left = 602.0
-offset_top = 540.0
-offset_right = 702.0
-offset_bottom = 571.0
+offset_left = 512.0
+offset_top = 544.0
+offset_right = 612.0
+offset_bottom = 575.0
 text = "Algorithm A"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 765.0
-offset_top = 543.0
-offset_right = 865.0
-offset_bottom = 574.0
+offset_left = 696.0
+offset_top = 544.0
+offset_right = 796.0
+offset_bottom = 575.0
 text = "Algorithm B
 "
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 928.0
-offset_top = 540.0
-offset_right = 1028.0
-offset_bottom = 571.0
+offset_left = 896.0
+offset_top = 544.0
+offset_right = 996.0
+offset_bottom = 575.0
 text = "Algorithm C
 "
 
