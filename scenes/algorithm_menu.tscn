@@ -28,6 +28,15 @@ offset_bottom = 575.0
 text = "Algorithm C
 "
 
+[node name="ShuffleButton" type="Button" parent="."]
+offset_left = 126.0
+offset_top = 87.0
+offset_right = 189.0
+offset_bottom = 118.0
+text = "Shuffle
+"
+
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="ShuffleButton" to="." method="_on_shuffle_button_pressed"]

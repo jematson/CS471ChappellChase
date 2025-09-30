@@ -10,6 +10,7 @@ var stair_heights = []
 func _ready() -> void:
 	for i in range(num_stairs):
 		stair_heights.append(i+1)
+		
 	draw_stairs()
 
 
@@ -25,3 +26,17 @@ func draw_stairs() -> void:
 		new_node.set_size(Vector2(stair_width, stairh))
 		new_node.color = Color.WHITE
 		add_child(new_node)
+
+
+func shuffle_stairs():
+	var children = get_children()
+	print("Deleting stairs...")
+	if children.size() > 0:
+		for i in range(1,children.size()):
+			var child = children[i]
+			child.queue_free()
+			
+	print("Shuffling stairs...")
+	stair_heights.shuffle()
+	draw_stairs()
+	
