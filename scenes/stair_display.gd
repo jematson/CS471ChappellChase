@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var num_stairs = 15
 var stair_heights = []
 var stairs = []
@@ -17,11 +16,12 @@ func _ready() -> void:
 		
 	draw_stairs()
 
-
 func draw_stairs() -> void:
 	var stair_width = (bg_width - (10 * (num_stairs+1))) / num_stairs
+	var blue_increment = 0.0
 	for i in range(num_stairs):
-
+		
+		
 		var stairx = bg_position[0] + i*(stair_width + 10) + 10
 		var stairh = stair_heights[i]*25
 		var stairy = bottom_floor - stairh
@@ -33,22 +33,34 @@ func draw_stairs() -> void:
 		new_node.set_position(Vector2(stairx, stairy))
 		new_node.target_pos = (Vector2(stairx, stairy))
 		new_node.set_size(Vector2(stair_width, stairh))
-		new_node.color = Color.WHITE
+		new_node.color = Color(0.5, 0.7, blue_increment)
 		add_child(new_node)
 		stairs.append(new_node)
-
+		blue_increment += 1.0/15.0
 
 func shuffle_stairs():
-	var new_order = stair_heights.duplicate()
-	new_order.shuffle()
-	
-	for target_index in range(num_stairs):
-		var target_value = new_order[target_index]
-		
+	stair_heights.shuffle()
+	update_stair_positions()
+
+func update_stair_positions():
+	for index in range(stair_heights.size()):
+		var value = stair_heights[index]
 		for stair in stairs:
-			if stair.value == target_value:
-				var target_x = indices[target_index].y
+			if stair.value == value:
+				var target_x = indices[index].y
 				var target_y = bottom_floor - stair.height
-				#var target_y = indices[target_index].z
 				stair.target_pos = Vector2(target_x, target_y)
 				break
+
+func bubble_sort():
+	var n = stair_heights.size()
+	for i in range(n - 1):
+		for j in range(n - i - 1):
+			if stair_heights[j] > stair_heights[j + 1]:
+				var temp = stair_heights[j]
+				stair_heights[j] = stair_heights[j + 1]
+				stair_heights[j + 1] = temp
+				
+				update_stair_positions()
+				
+				await get_tree().create_timer(0.3).timeout

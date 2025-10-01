@@ -10,7 +10,7 @@ offset_left = 512.0
 offset_top = 544.0
 offset_right = 612.0
 offset_bottom = 575.0
-text = "Algorithm A"
+text = "Bubble Sort"
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 696.0
