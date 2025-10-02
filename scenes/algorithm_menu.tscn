@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://c84hilvcwcvgs"]
+
+[ext_resource type="Script" uid="uid://bmy6qwbn3kess" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
+
+[node name="AlgorithmMenu" type="Node2D"]
+script = ExtResource("1_hi5xi")
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 602.0
+offset_top = 540.0
+offset_right = 702.0
+offset_bottom = 571.0
+text = "Algorithm A"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 765.0
+offset_top = 543.0
+offset_right = 865.0
+offset_bottom = 574.0
+text = "Algorithm B
+"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 928.0
+offset_top = 540.0
+offset_right = 1028.0
+offset_bottom = 571.0
+text = "Algorithm C
+"
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
