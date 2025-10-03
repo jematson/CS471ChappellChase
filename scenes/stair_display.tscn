@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://lwhpaer1wb21"]
+
+[ext_resource type="Script" uid="uid://do1gssy7lou21" path="res://scenes/stair_display.gd" id="1_36r20"]
+
+[node name="StairDisplay" type="Node2D"]
+script = ExtResource("1_36r20")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = 284.0
+offset_top = 67.0
+offset_right = 1105.0
+offset_bottom = 523.0
+color = Color(0, 0, 0, 1)

@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=4 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://cgkdvcww5cr20" path="res://scenes/level.gd" id="1_w8frs"]
+[ext_resource type="PackedScene" uid="uid://lwhpaer1wb21" path="res://scenes/stair_display.tscn" id="2_w7c3h"]
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_w8frs")
+
+[node name="StairDisplay" parent="." instance=ExtResource("2_w7c3h")]
 
 [node name="AlgorithmMenu" parent="." instance=ExtResource("1_2q6dc")]
