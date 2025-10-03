@@ -26,4 +26,4 @@
 ## For Development
 
 ### Linting
-Follow this (link)[https://github.com/Scony/godot-gdscript-toolkit] to apply godot linter formatting to code
+Follow this [link](https://github.com/Scony/godot-gdscript-toolkit) to apply godot linter formatting to code
