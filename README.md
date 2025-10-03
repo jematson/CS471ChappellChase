@@ -22,3 +22,8 @@
 3. Finish the import by clicking the Import button
 
 ![alt text](images/step-three.png)
+
+## For Development
+
+### Linting
+Follow this (link)[https://github.com/Scony/godot-gdscript-toolkit] to apply godot linter formatting to code
