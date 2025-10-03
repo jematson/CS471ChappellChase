@@ -13,15 +13,15 @@
 ### Import project in Godot
 1. Once Godot has loaded, click `Import Existing Project` to import the project
 
-![step one](images/step-one.png)
+![step one](docs/images/step-one.png)
 
 2. Navigate to the project repository directory and select project file
 
-![step three](images/step-two.png)
+![step three](docs/images/step-two.png)
 
 3. Finish the import by clicking the Import button
 
-![alt text](images/step-three.png)
+![alt text](docs/images/step-three.png)
 
 ### Building Executables
 
@@ -29,7 +29,7 @@ To build an executable for the project in Godot, first open the editor
 
 Once the Godot editor has been opened, navigate to the project tab on the top toolbar in Godot
 
-![build-instruction-1](images/build-instruction1.png)
+![build-instruction-1](docs/images/build-instruction1.png)
 
 Next, select `Export...` in the drop down menu
 
@@ -37,11 +37,11 @@ In the next menu, select which operating system and architecture to build for
 
 Next click `Export Project...` and navigate to the specific build folder in the repository and name the executable
 
-![alt text](images/build-instruction2.png)
+![alt text](docs/images/build-instruction2.png)
 
 Once finished, click `Save`
 
-![alt text](images/build-instruction3.png)
+![alt text](docs/images/build-instruction3.png)
 
 ### Linting
 
