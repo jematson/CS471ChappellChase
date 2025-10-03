@@ -1,6 +1,6 @@
 # ChappellChase game for CS471
 
-## How To Use
+## How To Start Contributing to Development
 
 ### Install and Run Godot
 
@@ -23,7 +23,7 @@
 
 ![alt text](images/step-three.png)
 
-## Building Executables
+### Building Executables
 
 To build an executable for the project in Godot, first open the editor
 
@@ -42,3 +42,7 @@ Next click `Export Project...` and navigate to the specific build folder in the 
 Once finished, click `Save`
 
 ![alt text](images/build-instruction3.png)
+
+### Linting
+
+Follow this [link](https://github.com/Scony/godot-gdscript-toolkit) to apply godot linter formatting to code
