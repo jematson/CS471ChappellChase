@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://crmsvxie0bwea"]
+
+[ext_resource type="Script" uid="uid://bj3whlx78oio" path="res://source/algorithm_executer.gd" id="1_8dlho"]
+[ext_resource type="PackedScene" uid="uid://lwhpaer1wb21" path="res://scenes/stair_display.tscn" id="1_8p0pm"]
+
+[node name="AlgorithmExecuter" type="Node2D"]
+script = ExtResource("1_8dlho")
+
+[node name="StairDisplay" parent="." instance=ExtResource("1_8p0pm")]
