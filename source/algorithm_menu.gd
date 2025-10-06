@@ -3,7 +3,7 @@ extends Node2D
 signal shuffle
 signal bubble
 signal quick
-signal merge
+signal insert
 
 
 func _on_button_1_pressed() -> void:
@@ -20,3 +20,7 @@ func _on_button_3_pressed() -> void:
 
 func _on_shuffle_button_pressed() -> void:
 	emit_signal("shuffle")
+
+
+func _on_inssort_button_pressed() -> void:
+	emit_signal("insert")
