@@ -2,3 +2,4 @@
 .godot/
 /android/
 *.gd.uid
+scenes/*.tmp
