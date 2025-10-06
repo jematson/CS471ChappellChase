@@ -3,3 +3,5 @@
 /android/
 *.gd.uid
 scenes/*.tmp
+// ignores Visual Studio Code specific settings
+.vscode/
