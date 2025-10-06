@@ -1,9 +1,8 @@
 extends Node2D
 
-@onready var display = $StairDisplay
-
 var num_stairs = 15
 var stair_heights = []
+@onready var display = $StairDisplay
 
 func _ready() -> void:
 	for i in range(num_stairs):

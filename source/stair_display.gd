@@ -9,14 +9,14 @@ var indices = []
 @onready var bottom_floor = bg_position[1] + bg_height - 50
 
 
-func draw_stairs(stairArray) -> void:
+func draw_stairs(stair_array) -> void:
 	current_stairs = []
-	var num_stairs = stairArray.size()
+	var num_stairs = stair_array.size()
 	var stair_width = (bg_width - (10 * (num_stairs + 1))) / num_stairs
 	var blue_increment = 0.0
 	for i in range(num_stairs):
 		var stairx = bg_position[0] + i * (stair_width + 10) + 10
-		var stairh = stairArray[i] * 25
+		var stairh = stair_array[i] * 25
 		var stairy = bottom_floor - stairh
 
 		indices.append(Vector3(i, stairx, stairy))
@@ -32,9 +32,9 @@ func draw_stairs(stairArray) -> void:
 		blue_increment += 1.0 / 15.0
 
 
-func update_stair_positions(newStairs):
-	for index in range(newStairs.size()):
-		var height = newStairs[index]
+func update_stair_positions(new_stairs):
+	for index in range(new_stairs.size()):
+		var height = new_stairs[index]
 		for stair in current_stairs:
 			if stair.value == height:
 				var target_x = indices[index].y
