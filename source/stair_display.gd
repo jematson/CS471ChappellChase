@@ -1,5 +1,6 @@
 extends Node2D
 
+const InsertionSort = preload("insertion_sort.gd")
 var num_stairs = 15
 var stair_heights = []
 var stairs = []
@@ -9,7 +10,6 @@ var indices = []
 @onready var bg_height = background.size[1]
 @onready var bg_width = background.size[0]
 @onready var bottom_floor = bg_position[1] + bg_height - 50
-const InsertionSort = preload("insertion_sort.gd")
 
 func _ready() -> void:
 	for i in range(num_stairs):
@@ -73,8 +73,12 @@ func call_quicksort():
 	quicksort(stair_heights, 0, num_stairs - 1)
 
 func call_insertionsort():
-	await InsertionSort.insertion_sort(stair_heights, func(): update_stair_positions(), func(array:Array, i, j): swap(array, i, j), self)
-	
+	await InsertionSort.insertion_sort(
+		stair_heights,
+		func(): update_stair_positions(),
+		func(array:Array, i, j): swap(array, i, j),
+		self
+		)
 
 func partition(array, low, high):
 	var pivot_value = array[high]
@@ -95,7 +99,6 @@ func swap(array, i, j):
 	array[j] = tmp
 	update_stair_positions()
 	await get_tree().create_timer(0.3).timeout
-	
 
 func quicksort(array, low, high):
 	if low < high:
