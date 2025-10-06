@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://lwhpaer1wb21"]
 
-[ext_resource type="Script" uid="uid://do1gssy7lou21" path="res://scenes/stair_display.gd" id="1_36r20"]
+[ext_resource type="Script" uid="uid://c7b3rgwc58sid" path="res://source/stair_display.gd" id="1_36r20"]
 
 [node name="StairDisplay" type="Node2D"]
 script = ExtResource("1_36r20")

@@ -5,29 +5,6 @@
 [node name="AlgorithmMenu" type="Node2D"]
 script = ExtResource("1_hi5xi")
 
-[node name="Button1" type="Button" parent="."]
-offset_left = 512.0
-offset_top = 544.0
-offset_right = 612.0
-offset_bottom = 575.0
-text = "Bubble Sort"
-
-[node name="Button2" type="Button" parent="."]
-offset_left = 696.0
-offset_top = 544.0
-offset_right = 796.0
-offset_bottom = 575.0
-text = "Algorithm B
-"
-
-[node name="Button3" type="Button" parent="."]
-offset_left = 896.0
-offset_top = 544.0
-offset_right = 996.0
-offset_bottom = 575.0
-text = "Algorithm C
-"
-
 [node name="ShuffleButton" type="Button" parent="."]
 offset_left = 126.0
 offset_top = 87.0
@@ -36,7 +13,34 @@ offset_bottom = 118.0
 text = "Shuffle
 "
 
-[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 526.0
+offset_top = 559.0
+offset_right = 929.0
+offset_bottom = 608.0
+theme_override_constants/separation = 45
+
+[node name="BubbleSortButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Bubble Sort"
+
+[node name="QuickSortButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Quick Sort
+"
+
+[node name="InsertionSortButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Insertion Sort"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Algorithm C
+"
+
 [connection signal="pressed" from="ShuffleButton" to="." method="_on_shuffle_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BubbleSortButton" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/QuickSortButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/InsertionSortButton" to="." method="_on_inssort_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
