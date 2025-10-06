@@ -34,6 +34,7 @@ func bubble_sort():
 func call_quicksort():
 	quicksort(stair_heights, 0, num_stairs - 1)
 
+
 func call_insertionsort():
 	await InsertionSort.insertion_sort(
 		stair_heights,
@@ -41,6 +42,7 @@ func call_insertionsort():
 		func(array: Array, i, j): swap(array, i, j),
 		self
 	)
+
 
 func partition(array, low, high):
 	var pivot_value = array[high]
