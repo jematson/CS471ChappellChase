@@ -1,5 +1,6 @@
 extends Node2D
 
+const InsertionSort = preload("insertion_sort.gd")
 var num_stairs = 15
 var stair_heights = []
 @onready var display = $StairDisplay
@@ -32,6 +33,15 @@ func bubble_sort():
 
 func call_quicksort():
 	quicksort(stair_heights, 0, num_stairs - 1)
+
+
+func call_insertionsort():
+	await InsertionSort.insertion_sort(
+		stair_heights,
+		func(array: Array): display.update_stair_positions(array),
+		func(array: Array, i, j): swap(array, i, j),
+		self
+	)
 
 
 func partition(array, low, high):
