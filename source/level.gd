@@ -16,3 +16,7 @@ func _ready():
 	
 	button.button_options(algorithm_options)
 	executor.initialize_stairs(num_stairs, stair_start)
+
+
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
