@@ -9,3 +9,4 @@ func _ready():
 	button.bubble.connect(executer.bubble_sort)
 	button.quick.connect(executer.call_quicksort)
 	button.insert.connect(executer.call_insertionsort)
+	button.selection.connect(executer.call_selectionsort)

@@ -1,6 +1,7 @@
 extends Node2D
 
 const InsertionSort = preload("insertion_sort.gd")
+const SelectionSort = preload("res://source/selection_sort.gd")
 var num_stairs = 15
 var stair_heights = []
 @onready var display = $StairDisplay
@@ -44,6 +45,14 @@ func call_insertionsort():
 	)
 
 
+func call_selectionsort():
+	await SelectionSort.selection_sort(
+		stair_heights,
+		func(array: Array, i, j): swap(array, i, j),
+		self
+	)
+
+
 func partition(array, low, high):
 	var pivot_value = array[high]
 	var i = low - 1
@@ -63,7 +72,6 @@ func swap(array, i, j):
 	array[j] = tmp
 	display.update_stair_positions(array)
 	await get_tree().create_timer(0.3).timeout
-
 
 func quicksort(array, low, high):
 	if low < high:
