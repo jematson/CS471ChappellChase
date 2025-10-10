@@ -14,6 +14,7 @@ func button_options(algorithm_options):
 		else:
 			child.hide()
 
+
 func _on_button_1_pressed() -> void:
 	emit_signal("bubble")
 

@@ -19,4 +19,12 @@ offset_right = 564.0
 offset_bottom = 372.0
 text = "Game"
 
+[node name="PracticeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 440.0
+offset_right = 591.0
+offset_bottom = 471.0
+text = "Practice Mode"
+
 [connection signal="pressed" from="GameButton" to="." method="_on_game_button_pressed"]
