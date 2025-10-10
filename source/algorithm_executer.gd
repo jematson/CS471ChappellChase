@@ -47,9 +47,7 @@ func call_insertionsort():
 
 func call_selectionsort():
 	await SelectionSort.selection_sort(
-		stair_heights,
-		func(array: Array, i, j): swap(array, i, j),
-		self
+		stair_heights, func(array: Array, i, j): swap(array, i, j), self
 	)
 
 
@@ -72,6 +70,7 @@ func swap(array, i, j):
 	array[j] = tmp
 	display.update_stair_positions(array)
 	await get_tree().create_timer(0.3).timeout
+
 
 func quicksort(array, low, high):
 	if low < high:
