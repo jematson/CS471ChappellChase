@@ -10,10 +10,13 @@ var algorithm_options = ["BubbleSortButton", "QuickSortButton", "InsertionSortBu
 
 
 func _ready():
+
 	button.shuffle.connect(executor.shuffle_stairs)
 	button.bubble.connect(executor.bubble_sort)
 	button.quick.connect(executor.call_quicksort)
 	button.insert.connect(executor.call_insertionsort)
-
+	button.selection.connect(executer.call_selectionsort)
+  
 	button.button_options(algorithm_options)
 	executor.initialize_stairs(num_stairs, stair_start)
+

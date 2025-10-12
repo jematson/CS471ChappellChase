@@ -1,6 +1,8 @@
 extends Node2D
 
 const InsertionSort = preload("insertion_sort.gd")
+const SelectionSort = preload("res://source/selection_sort.gd")
+var num_stairs = 15
 var stair_heights = []
 @onready var display = $StairDisplay
 
@@ -42,6 +44,12 @@ func call_insertionsort():
 		func(array: Array): display.update_stair_positions(array),
 		func(array: Array, i, j): swap(array, i, j),
 		self
+	)
+
+
+func call_selectionsort():
+	await SelectionSort.selection_sort(
+		stair_heights, func(array: Array, i, j): swap(array, i, j), self
 	)
 
 
