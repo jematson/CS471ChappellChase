@@ -10,3 +10,12 @@ script = ExtResource("1_w8frs")
 [node name="AlgorithmExecuter" parent="." instance=ExtResource("3_w8frs")]
 
 [node name="AlgorithmMenu" parent="." instance=ExtResource("1_2q6dc")]
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 610.0
+offset_right = 59.0
+offset_bottom = 641.0
+text = "Menu"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
