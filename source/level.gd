@@ -6,7 +6,7 @@ extends Node2D
 # Level Starting Conditions
 var num_stairs = 15
 var stair_start = [1, 3, 2, 4, 5, 7, 6, 8, 9, 11, 13, 10, 12, 15, 14,]
-var algorithm_options = ["BubbleSortButton", "QuickSortButton", "InsertionSortButton"]
+var algorithm_options = ["BubbleSortButton", "QuickSortButton", "InsertionSortButton",]
 
 
 func _ready():
