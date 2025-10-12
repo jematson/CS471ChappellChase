@@ -12,6 +12,7 @@ func initialize_stairs(num_stairs, start_shuffle) -> void:
 	stair_heights = start_shuffle
 	display.update_stair_positions(stair_heights)
 
+
 func shuffle_stairs():
 	stair_heights.shuffle()
 	display.update_stair_positions(stair_heights)
