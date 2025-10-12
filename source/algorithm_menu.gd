@@ -6,11 +6,11 @@ signal quick
 signal insert
 signal selection
 
-@onready var buttonBox = $HBoxContainer
+@onready var button_box = $HBoxContainer
 
 
 func button_options(algorithm_options):
-	for child in buttonBox.get_children():
+	for child in button_box.get_children():
 		if child.name in algorithm_options:
 			child.show()
 		else:
