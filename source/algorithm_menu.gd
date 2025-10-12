@@ -4,6 +4,7 @@ signal shuffle
 signal bubble
 signal quick
 signal insert
+signal selection
 
 @onready var button_box = $HBoxContainer
 
@@ -34,3 +35,7 @@ func _on_shuffle_button_pressed() -> void:
 
 func _on_inssort_button_pressed() -> void:
 	emit_signal("insert")
+
+
+func _on_selection_sort_button_pressed() -> void:
+	emit_signal("selection")
