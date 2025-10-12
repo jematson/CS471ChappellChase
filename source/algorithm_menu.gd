@@ -7,6 +7,7 @@ signal insert
 
 @onready var buttonBox = $HBoxContainer
 
+
 func button_options(algorithm_options):
 	for child in buttonBox.get_children():
 		if child.name in algorithm_options:
