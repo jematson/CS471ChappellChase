@@ -30,18 +30,12 @@ var algorithm_options = [
 @onready var button = $AlgorithmMenu
 
 
-
-@onready var executor = $AlgorithmExecuter
-@onready var button = $AlgorithmMenu
-
-
 func _ready():
 	button.shuffle.connect(executor.shuffle_stairs)
 	button.bubble.connect(executor.bubble_sort)
 	button.quick.connect(executor.call_quicksort)
 	button.insert.connect(executor.call_insertionsort)
 	button.selection.connect(executor.call_selectionsort)
-
 
 	button.button_options(algorithm_options)
 	executor.initialize_stairs(num_stairs, stair_start)
