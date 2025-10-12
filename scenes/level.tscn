@@ -1,9 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-
 [ext_resource type="Script" uid="uid://c4d7a3y84iecr" path="res://source/level.gd" id="1_w8frs"]
-
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
 
 [node name="Level" type="Node2D"]
