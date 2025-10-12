@@ -13,18 +13,19 @@ script = ExtResource("1_l6cm7")
 
 [node name="GameButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 496.0
-offset_top = 341.0
-offset_right = 564.0
-offset_bottom = 372.0
+offset_left = 531.0
+offset_top = 298.0
+offset_right = 599.0
+offset_bottom = 329.0
 text = "Game"
 
 [node name="PracticeButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 473.0
-offset_top = 440.0
-offset_right = 591.0
-offset_bottom = 471.0
+offset_left = 508.0
+offset_top = 390.0
+offset_right = 626.0
+offset_bottom = 421.0
 text = "Practice Mode"
 
 [connection signal="pressed" from="GameButton" to="." method="_on_game_button_pressed"]
+[connection signal="pressed" from="PracticeButton" to="." method="_on_practice_button_pressed"]
