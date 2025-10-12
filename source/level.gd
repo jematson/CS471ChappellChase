@@ -1,12 +1,20 @@
 extends Node2D
 
-@onready var executer = $AlgorithmExecuter
+# Level Starting Conditions
+var num_stairs = 15
+var stair_start = [1, 3, 2, 4, 5, 7, 6, 8, 9, 11, 13, 10, 12, 15, 14]
+var algorithm_options = ["BubbleSortButton", "QuickSortButton", "InsertionSortButton"]
+
+@onready var executor = $AlgorithmExecuter
 @onready var button = $AlgorithmMenu
 
 
 func _ready():
-	button.shuffle.connect(executer.shuffle_stairs)
-	button.bubble.connect(executer.bubble_sort)
-	button.quick.connect(executer.call_quicksort)
-	button.insert.connect(executer.call_insertionsort)
-	button.selection.connect(executer.call_selectionsort)
+	button.shuffle.connect(executor.shuffle_stairs)
+	button.bubble.connect(executor.bubble_sort)
+	button.quick.connect(executor.call_quicksort)
+	button.insert.connect(executor.call_insertionsort)
+	button.selection.connect(executor.call_selectionsort)
+
+	button.button_options(algorithm_options)
+	executor.initialize_stairs(num_stairs, stair_start)

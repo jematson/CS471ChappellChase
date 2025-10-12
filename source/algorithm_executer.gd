@@ -7,10 +7,12 @@ var stair_heights = []
 @onready var display = $StairDisplay
 
 
-func _ready() -> void:
+func initialize_stairs(num_stairs, start_shuffle) -> void:
 	for i in range(num_stairs):
 		stair_heights.append(i + 1)
 	display.draw_stairs(stair_heights)
+	stair_heights = start_shuffle
+	display.update_stair_positions(stair_heights)
 
 
 func shuffle_stairs():
@@ -33,7 +35,7 @@ func bubble_sort():
 
 
 func call_quicksort():
-	quicksort(stair_heights, 0, num_stairs - 1)
+	quicksort(stair_heights, 0, stair_heights.size() - 1)
 
 
 func call_insertionsort():

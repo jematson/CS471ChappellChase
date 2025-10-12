@@ -6,6 +6,16 @@ signal quick
 signal insert
 signal selection
 
+@onready var button_box = $HBoxContainer
+
+
+func button_options(algorithm_options):
+	for child in button_box.get_children():
+		if child.name in algorithm_options:
+			child.show()
+		else:
+			child.hide()
+
 
 func _on_button_1_pressed() -> void:
 	emit_signal("bubble")
