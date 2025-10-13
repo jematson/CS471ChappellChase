@@ -25,6 +25,7 @@ func _on_button_1_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	emit_signal("quick")
 
+
 func _on_shuffle_button_pressed() -> void:
 	emit_signal("shuffle")
 

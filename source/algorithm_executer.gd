@@ -87,11 +87,15 @@ func partition(array, low, high):
 	swap(array, i + 1, high)
 	return i + 1
 
+
 func call_merge_sort():
 	sort_timer.start_timer()
-	await MergeSort.merge_sort(stair_heights, func(array: Array): display.update_stair_positions(array), self)
+	await MergeSort.merge_sort(
+		stair_heights, func(array: Array): display.update_stair_positions(array), self
+	)
 	emit_signal("sorted")
 	sort_timer.stop_timer()
+
 
 func swap(array, i, j):
 	var tmp = array[i]
