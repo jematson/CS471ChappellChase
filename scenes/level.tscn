@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=5 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-[ext_resource type="Script" uid="uid://c3js4fpuranuv" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
+[ext_resource type="Script" uid="uid://cynfqilcpbudk" path="res://sort_timer.gd" id="4_mx8sn"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
@@ -24,5 +25,12 @@ offset_top = 23.0
 offset_right = 735.0
 offset_bottom = 46.0
 text = "Level 0"
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 450.0
+offset_top = 35.0
+offset_right = 490.0
+offset_bottom = 58.0
+script = ExtResource("4_mx8sn")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
