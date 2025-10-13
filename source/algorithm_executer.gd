@@ -52,7 +52,6 @@ func call_insertionsort():
 	await InsertionSort.insertion_sort(
 		stair_heights,
 		func(array: Array): display.update_stair_positions(array),
-		func(array: Array, i, j): swap(array, i, j),
 		self
 	)
 	emit_signal("sorted")
