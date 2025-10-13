@@ -10,6 +10,7 @@ var stair_heights = []
 @onready var display = $StairDisplay
 @onready var sort_timer = get_node("../TimerLabel")
 
+
 func reset():
 	stair_heights = []
 	display.empty()
@@ -95,11 +96,9 @@ func swap(array, i, j):
 
 
 func quicksort(array, low, high):
-	sort_timer.start_timer()
 	if low < high:
 		var pivot_index = await partition(array, low, high)
 
 		quicksort(array, low, pivot_index - 1)
 
 		quicksort(array, pivot_index + 1, high)
-	sort_timer.stop_timer()
