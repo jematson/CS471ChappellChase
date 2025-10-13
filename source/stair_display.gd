@@ -9,6 +9,14 @@ var indices = []
 @onready var bottom_floor = bg_position[1] + bg_height - 50
 
 
+func empty():
+	current_stairs = []
+	indices = []
+	var children = get_children()
+	for i in range(children.size() - 1):
+		children[i + 1].queue_free()
+
+
 func draw_stairs(stair_array) -> void:
 	current_stairs = []
 	var num_stairs = stair_array.size()

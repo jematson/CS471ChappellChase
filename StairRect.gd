@@ -7,5 +7,6 @@ var target_pos: Vector2
 var height: float
 var speed: float = 400.0
 
+
 func _process(delta):
 	position = position.move_toward(target_pos, speed * delta)
