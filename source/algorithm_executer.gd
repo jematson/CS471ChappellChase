@@ -3,6 +3,7 @@ extends Node2D
 signal sorted
 
 const InsertionSort = preload("insertion_sort.gd")
+const MergeSort = preload("res://source/merge_sort.gd")
 const SelectionSort = preload("res://source/selection_sort.gd")
 var num_stairs = 15
 var stair_heights = []
@@ -86,6 +87,11 @@ func partition(array, low, high):
 	swap(array, i + 1, high)
 	return i + 1
 
+func call_merge_sort():
+	sort_timer.start_timer()
+	await MergeSort.merge_sort(stair_heights, func(array: Array): display.update_stair_positions(array), self)
+	emit_signal("sorted")
+	sort_timer.stop_timer()
 
 func swap(array, i, j):
 	var tmp = array[i]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c84hilvcwcvgs"]
 
-[ext_resource type="Script" uid="uid://dv7l6s7e77h3a" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
+[ext_resource type="Script" uid="uid://bmy6qwbn3kess" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
 
 [node name="AlgorithmMenu" type="Node2D"]
 script = ExtResource("1_hi5xi")
@@ -33,10 +33,9 @@ text = "Quick Sort
 layout_mode = 2
 text = "Insertion Sort"
 
-[node name="Button3" type="Button" parent="HBoxContainer"]
-visible = false
+[node name="MergeSortButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "Algorithm C
+text = "Merge Sort
 "
 
 [node name="SelectionSortButton" type="Button" parent="HBoxContainer"]
@@ -47,5 +46,5 @@ text = "Selection Sort"
 [connection signal="pressed" from="HBoxContainer/BubbleSortButton" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/QuickSortButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/InsertionSortButton" to="." method="_on_inssort_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/MergeSortButton" to="." method="_on_mergesort_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/SelectionSortButton" to="." method="_on_selection_sort_button_pressed"]
