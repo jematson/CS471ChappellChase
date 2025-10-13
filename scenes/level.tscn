@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-[ext_resource type="Script" uid="uid://c4d7a3y84iecr" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Script" uid="uid://c3js4fpuranuv" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
 
 [node name="Level" type="Node2D"]
@@ -17,5 +17,12 @@ offset_top = 610.0
 offset_right = 59.0
 offset_bottom = 641.0
 text = "Menu"
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 681.0
+offset_top = 23.0
+offset_right = 735.0
+offset_bottom = 46.0
+text = "Level 0"
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

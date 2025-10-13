@@ -1,10 +1,18 @@
 extends Node2D
 
+signal sorted
+
 const InsertionSort = preload("insertion_sort.gd")
 const SelectionSort = preload("res://source/selection_sort.gd")
 var num_stairs = 15
 var stair_heights = []
+
 @onready var display = $StairDisplay
+
+
+func reset():
+	stair_heights = []
+	display.empty()
 
 
 func initialize_stairs(num_stairs, start_shuffle) -> void:
@@ -32,10 +40,12 @@ func bubble_sort():
 				display.update_stair_positions(stair_heights)
 
 				await get_tree().create_timer(0.3).timeout
+	emit_signal("sorted")
 
 
 func call_quicksort():
 	quicksort(stair_heights, 0, stair_heights.size() - 1)
+	emit_signal("sorted")
 
 
 func call_insertionsort():
@@ -45,12 +55,14 @@ func call_insertionsort():
 		func(array: Array, i, j): swap(array, i, j),
 		self
 	)
+	emit_signal("sorted")
 
 
 func call_selectionsort():
 	await SelectionSort.selection_sort(
 		stair_heights, func(array: Array, i, j): swap(array, i, j), self
 	)
+	emit_signal("sorted")
 
 
 func partition(array, low, high):
