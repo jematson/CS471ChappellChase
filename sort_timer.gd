@@ -1,12 +1,17 @@
 extends Label
 
 var timer_running = false
-var elapsed_time = 30.0
+var remaining_time = 30.0
+
 
 func _process(delta):
-	if timer_running:
-		elapsed_time -= delta
-		text = format_time(elapsed_time)
+	if timer_running and remaining_time > 0.0:
+		remaining_time -= delta
+		text = format_time(remaining_time)
+	elif timer_running:
+		# Uncomment the below to make the timer reset when out of time
+		# remaining_time = 30.0
+		text = "OUT OF TIME"
 
 
 func format_time(t):

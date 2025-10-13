@@ -27,10 +27,10 @@ offset_bottom = 46.0
 text = "Level 0"
 
 [node name="TimerLabel" type="Label" parent="."]
-offset_left = 450.0
-offset_top = 35.0
-offset_right = 490.0
-offset_bottom = 58.0
+offset_left = 285.0
+offset_top = 23.0
+offset_right = 325.0
+offset_bottom = 46.0
 script = ExtResource("4_mx8sn")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
