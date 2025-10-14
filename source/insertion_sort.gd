@@ -1,7 +1,8 @@
 extends RefCounted
 
 
-static func insertion_sort(stair_heights: Array, update_stairs: Callable, swap: Callable, node: Node):
+static func insertion_sort(stair_heights: Array, update_stairs: Callable,
+	swap: Callable, node: Node):
 	for i in range(stair_heights.size()):
 		for j in range(stair_heights.size()):
 			if stair_heights[j] > stair_heights[i]:
