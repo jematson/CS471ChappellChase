@@ -37,7 +37,7 @@ func draw_stairs(stair_array) -> void:
 		new_node.color = Color(0.5, 0.7, blue_increment)
 		add_child(new_node)
 		current_stairs.append(new_node)
-		blue_increment += 1.0 / 15.0
+		blue_increment += 1.0 / num_stairs
 
 
 func update_stair_positions(new_stairs):

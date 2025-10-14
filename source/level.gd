@@ -11,53 +11,55 @@ var levels = {
 	[
 		[
 			1,
-			3,
 			2,
+			14,
 			4,
-			5,
-			7,
+			12,
 			6,
+			7,
 			8,
 			9,
-			11,
-			13,
 			10,
-			12,
-			15,
-			14,
+			11,
+			3,
+			13,
+			5,
+			15,			
 		],
 		[
 			"BubbleSortButton",
 			"MergeSortButton",
 			"InsertionSortButton",
 		],
-		15,
 	],
 	2:
 	[
+		[],
 		[
-			1,
+			"BubbleSortButton",
+			"QuickSortButton",
+			"SelectionSortButton",
+		],
+	],
+	3:
+	[
+		[
 			2,
-			13,
+			1,
+			3,
 			4,
-			14,
 			5,
 			6,
 			7,
-			8,
 			9,
-			3,
-			10,
-			11,
-			12,
-			15,
+			8,
+			10,		
 		],
 		[
-			"BubbleSortButton",
-			"InsertionSortButton",
 			"SelectionSortButton",
+			"MergeSortButton",
+			"BubbleSortButton",
 		],
-		20,
 	]
 }
 
@@ -67,6 +69,11 @@ var levels = {
 
 
 func _ready():
+	# Initialize large random list for level 2
+	for i in range(40):
+		levels[2][0].append(i+1)
+	levels[2][0].shuffle()
+	
 	label.text = "Level " + str(level_number)
 	stair_start = levels[1][0]
 	algorithm_options = levels[1][1]
@@ -79,7 +86,7 @@ func _ready():
 	button.merge.connect(executor.call_merge_sort)
 
 	button.button_options(algorithm_options)
-	executor.initialize_stairs(levels[level_number][2], stair_start)
+	executor.initialize_stairs(stair_start.size(), stair_start)
 
 
 func _on_menu_button_pressed() -> void:
@@ -88,7 +95,7 @@ func _on_menu_button_pressed() -> void:
 
 func new_level():
 	level_number += 1
-	if level_number > 2:
+	if level_number > levels.size():
 		level_number = 1
 	print("New level: ", level_number)
 	label.text = "Level " + str(level_number)
@@ -96,4 +103,4 @@ func new_level():
 	stair_start = levels[level_number][0]
 	algorithm_options = levels[level_number][1]
 	button.button_options(algorithm_options)
-	executor.initialize_stairs(levels[level_number][2], stair_start)
+	executor.initialize_stairs(stair_start.size(), stair_start)
