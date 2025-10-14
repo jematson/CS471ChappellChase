@@ -24,9 +24,9 @@ var levels = {
 			3,
 			13,
 			5,
-			15,			
+			15,
 		],
-		[ # Correct: InsertionSort
+		[  # Correct: InsertionSort
 			"BubbleSortButton",
 			"MergeSortButton",
 			"InsertionSortButton",
@@ -35,7 +35,7 @@ var levels = {
 	2:
 	[
 		[],
-		[ # Correct: QuickSort
+		[  # Correct: QuickSort
 			"BubbleSortButton",
 			"QuickSortButton",
 			"SelectionSortButton",
@@ -53,9 +53,9 @@ var levels = {
 			7,
 			9,
 			8,
-			10,		
+			10,
 		],
-		[ # Correct: BubbleSort
+		[  # Correct: BubbleSort
 			"SelectionSortButton",
 			"MergeSortButton",
 			"BubbleSortButton",
@@ -71,9 +71,9 @@ var levels = {
 func _ready():
 	# Initialize large random list for level 2
 	for i in range(40):
-		levels[2][0].append(i+1)
+		levels[2][0].append(i + 1)
 	levels[2][0].shuffle()
-	
+
 	label.text = "Level " + str(level_number)
 	stair_start = levels[1][0]
 	algorithm_options = levels[1][1]
