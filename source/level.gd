@@ -26,7 +26,7 @@ var levels = {
 			5,
 			15,			
 		],
-		[
+		[ # Correct: InsertionSort
 			"BubbleSortButton",
 			"MergeSortButton",
 			"InsertionSortButton",
@@ -35,7 +35,7 @@ var levels = {
 	2:
 	[
 		[],
-		[
+		[ # Correct: QuickSort
 			"BubbleSortButton",
 			"QuickSortButton",
 			"SelectionSortButton",
@@ -55,7 +55,7 @@ var levels = {
 			8,
 			10,		
 		],
-		[
+		[ # Correct: BubbleSort
 			"SelectionSortButton",
 			"MergeSortButton",
 			"BubbleSortButton",
