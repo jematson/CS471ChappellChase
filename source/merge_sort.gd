@@ -52,8 +52,9 @@ static func merge(stair_heights: Array, left, mid, right, update_stairs: Callabl
 		k += 1
 
 
-static func merge_sort_recurse(stair_heights: Array, left, right,
-	update_stairs: Callable, node: Node):
+static func merge_sort_recurse(
+	stair_heights: Array, left, right, update_stairs: Callable, node: Node
+):
 	if left >= right:
 		return
 	var mid = left + (right - left) / 2
