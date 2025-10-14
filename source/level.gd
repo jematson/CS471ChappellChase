@@ -2,7 +2,7 @@ extends Node2D
 
 # Level Starting Conditions
 var level_number = 1
-var num_stairs = 15
+#var num_stairs = 15
 var stair_start = []
 var algorithm_options = []
 
@@ -30,7 +30,8 @@ var levels = {
 			"BubbleSortButton",
 			"MergeSortButton",
 			"InsertionSortButton",
-		]
+		],
+		15,
 	],
 	2:
 	[
@@ -55,7 +56,8 @@ var levels = {
 			"BubbleSortButton",
 			"InsertionSortButton",
 			"SelectionSortButton",
-		]
+		],
+		20,
 	]
 }
 
@@ -77,7 +79,7 @@ func _ready():
 	button.merge.connect(executor.call_merge_sort)
 
 	button.button_options(algorithm_options)
-	executor.initialize_stairs(num_stairs, stair_start)
+	executor.initialize_stairs(levels[level_number][2], stair_start)
 
 
 func _on_menu_button_pressed() -> void:
@@ -94,4 +96,4 @@ func new_level():
 	stair_start = levels[level_number][0]
 	algorithm_options = levels[level_number][1]
 	button.button_options(algorithm_options)
-	executor.initialize_stairs(num_stairs, stair_start)
+	executor.initialize_stairs(levels[level_number][2], stair_start)
