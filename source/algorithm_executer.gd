@@ -8,6 +8,7 @@ var num_stairs = 15
 var stair_heights = []
 
 @onready var display = $StairDisplay
+@onready var sort_timer = get_node("../TimerLabel")
 
 
 func reset():
@@ -29,6 +30,7 @@ func shuffle_stairs():
 
 
 func bubble_sort():
+	sort_timer.start_timer()
 	var n = stair_heights.size()
 	for i in range(n - 1):
 		for j in range(n - i - 1):
@@ -41,14 +43,18 @@ func bubble_sort():
 
 				await get_tree().create_timer(0.3).timeout
 	emit_signal("sorted")
+	sort_timer.stop_timer()
 
 
 func call_quicksort():
+	sort_timer.start_timer()
 	quicksort(stair_heights, 0, stair_heights.size() - 1)
 	emit_signal("sorted")
+	sort_timer.stop_timer()
 
 
 func call_insertionsort():
+	sort_timer.start_timer()
 	await InsertionSort.insertion_sort(
 		stair_heights,
 		func(array: Array): display.update_stair_positions(array),
@@ -56,13 +62,16 @@ func call_insertionsort():
 		self
 	)
 	emit_signal("sorted")
+	sort_timer.stop_timer()
 
 
 func call_selectionsort():
+	sort_timer.start_timer()
 	await SelectionSort.selection_sort(
 		stair_heights, func(array: Array, i, j): swap(array, i, j), self
 	)
 	emit_signal("sorted")
+	sort_timer.stop_timer()
 
 
 func partition(array, low, high):
