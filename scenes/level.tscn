@@ -10,9 +10,9 @@
 script = ExtResource("1_w8frs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -15.0
+offset_left = -25.0
 offset_top = -21.0
-offset_right = 1178.0
+offset_right = 1185.0
 offset_bottom = 665.0
 texture = ExtResource("2_ppgk2")
 

@@ -16,10 +16,10 @@ text = "Shuffle
 "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 526.0
-offset_top = 559.0
-offset_right = 929.0
-offset_bottom = 590.0
+offset_left = 518.0
+offset_top = 562.0
+offset_right = 1208.0
+offset_bottom = 593.0
 theme_override_constants/separation = 45
 
 [node name="BubbleSortButton" type="Button" parent="HBoxContainer"]
