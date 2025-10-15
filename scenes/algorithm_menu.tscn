@@ -1,15 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://c84hilvcwcvgs"]
 
-[ext_resource type="Script" uid="uid://bmy6qwbn3kess" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
+[ext_resource type="Script" uid="uid://dv7l6s7e77h3a" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
 
 [node name="AlgorithmMenu" type="Node2D"]
 script = ExtResource("1_hi5xi")
 
 [node name="ShuffleButton" type="Button" parent="."]
+visible = false
 offset_left = 126.0
 offset_top = 87.0
 offset_right = 189.0
 offset_bottom = 118.0
+disabled = true
 text = "Shuffle
 "
 

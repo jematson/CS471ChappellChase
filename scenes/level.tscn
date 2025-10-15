@@ -1,36 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=6 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-[ext_resource type="Script" uid="uid://qrubdkt5g00h" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Script" uid="uid://c3js4fpuranuv" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://scenes/chappellbasement.png" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
-[ext_resource type="Script" uid="uid://daxgiemmru00h" path="res://sort_timer.gd" id="4_mx8sn"]
+[ext_resource type="Script" uid="uid://b6jv5mwtaerr3" path="res://sort_timer.gd" id="4_mx8sn"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -15.0
+offset_top = -21.0
+offset_right = 1178.0
+offset_bottom = 665.0
+texture = ExtResource("2_ppgk2")
 
 [node name="AlgorithmExecuter" parent="." instance=ExtResource("3_w8frs")]
 
 [node name="AlgorithmMenu" parent="." instance=ExtResource("1_2q6dc")]
 
 [node name="MenuButton" type="Button" parent="."]
-offset_left = 6.0
-offset_top = 610.0
-offset_right = 59.0
-offset_bottom = 641.0
-text = "Menu"
+offset_left = 14.0
+offset_top = 165.0
+offset_right = 118.0
+offset_bottom = 281.0
+text = "Return
+to
+Menu"
 
 [node name="LevelLabel" type="Label" parent="."]
-offset_left = 681.0
-offset_top = 23.0
-offset_right = 735.0
-offset_bottom = 46.0
+offset_left = 44.0
+offset_top = 545.0
+offset_right = 98.0
+offset_bottom = 568.0
 text = "Level 0"
 
 [node name="TimerLabel" type="Label" parent="."]
-offset_left = 285.0
-offset_top = 23.0
-offset_right = 325.0
-offset_bottom = 46.0
+offset_left = 49.0
+offset_top = 593.0
+offset_right = 89.0
+offset_bottom = 616.0
 script = ExtResource("4_mx8sn")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

@@ -20,10 +20,10 @@ func empty():
 func draw_stairs(stair_array) -> void:
 	current_stairs = []
 	var num_stairs = stair_array.size()
-	var stair_width = (bg_width - (10 * (num_stairs + 1))) / num_stairs
-	var blue_increment = 0.0
+	var stair_width = (bg_width - (2 * (num_stairs + 1))) / num_stairs
+	var color_increment = 0.0
 	for i in range(num_stairs):
-		var stairx = bg_position[0] + i * (stair_width + 10) + 10
+		var stairx = bg_position[0] + i * (stair_width + 2) + 2
 		var stairh = stair_array[i] * 25
 		var stairy = bottom_floor - stairh
 
@@ -34,10 +34,10 @@ func draw_stairs(stair_array) -> void:
 		new_node.set_position(Vector2(stairx, stairy))
 		new_node.target_pos = (Vector2(stairx, stairy))
 		new_node.set_size(Vector2(stair_width, stairh))
-		new_node.color = Color(0.5, 0.7, blue_increment)
+		new_node.color = Color(0.3, color_increment, 0.1)
 		add_child(new_node)
 		current_stairs.append(new_node)
-		blue_increment += 1.0 / 15.0
+		color_increment += 0.4 / 15.0
 
 
 func update_stair_positions(new_stairs):
