@@ -24,21 +24,15 @@ static func merge(stair_heights: Array, left, mid, right, update_stairs: Callabl
 	while i < n1 && j < n2:
 		if left_part[i] <= right_part[j]:
 			stair_heights[k] = left_part[i]
-			update_stairs.call(stair_heights)
-			await node.get_tree().create_timer(0.3).timeout
 			i += 1
 		else:
 			stair_heights[k] = right_part[j]
-			update_stairs.call(stair_heights)
-			await node.get_tree().create_timer(0.3).timeout
 			j += 1
 		k += 1
 	# Copy the remaining elements of L[],
 	# if there are any
 	while i < n1:
 		stair_heights[k] = left_part[i]
-		update_stairs.call(stair_heights)
-		await node.get_tree().create_timer(0.3).timeout
 		i += 1
 		k += 1
 
@@ -46,10 +40,10 @@ static func merge(stair_heights: Array, left, mid, right, update_stairs: Callabl
 	# if there are any
 	while j < n2:
 		stair_heights[k] = right_part[j]
-		update_stairs.call(stair_heights)
-		await node.get_tree().create_timer(0.3).timeout
 		j += 1
 		k += 1
+	update_stairs.call(stair_heights)
+	await node.get_tree().create_timer(0.3).timeout
 
 
 static func merge_sort_recurse(
