@@ -1,12 +1,15 @@
 extends Node2D
 
+signal display_sorted
+
 var current_stairs = []
 var indices = []
+
 @onready var background: ColorRect = $BG
 @onready var bg_position = background.position
 @onready var bg_height = background.size[1]
 @onready var bg_width = background.size[0]
-@onready var bottom_floor = bg_position[1] + bg_height - 50
+@onready var bottom_floor = bg_position[1] + bg_height - 10
 
 
 func empty():
@@ -24,7 +27,7 @@ func draw_stairs(stair_array) -> void:
 	var blue_increment = 0.0
 	for i in range(num_stairs):
 		var stairx = bg_position[0] + i * (stair_width + 10) + 10
-		var stairh = stair_array[i] * 25
+		var stairh = stair_array[i] * ((bg_height - 20) / num_stairs)
 		var stairy = bottom_floor - stairh
 
 		indices.append(Vector3(i, stairx, stairy))
@@ -37,7 +40,7 @@ func draw_stairs(stair_array) -> void:
 		new_node.color = Color(0.5, 0.7, blue_increment)
 		add_child(new_node)
 		current_stairs.append(new_node)
-		blue_increment += 1.0 / 15.0
+		blue_increment += 1.0 / num_stairs
 
 
 func update_stair_positions(new_stairs):
@@ -49,3 +52,17 @@ func update_stair_positions(new_stairs):
 				var target_y = bottom_floor - stair.height
 				stair.target_pos = Vector2(target_x, target_y)
 				break
+
+
+func check_display():
+	await get_tree().process_frame
+	while true:
+		var sorted = true
+		for stair in current_stairs:
+			if stair.position.x != indices[stair.value - 1][1]:
+				sorted = false
+				break
+		if sorted:
+			emit_signal("display_sorted")
+			break
+		await get_tree().process_frame
