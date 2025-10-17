@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=27 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
-[ext_resource type="Script" uid="uid://c3js4fpuranuv" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://scenes/chappellbasement.png" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
 [ext_resource type="Script" uid="uid://dx1caorfod2v5" path="res://sort_timer.gd" id="4_mx8sn"]
@@ -94,7 +93,6 @@ animations = [{
 "name": &"gif_animation",
 "speed": 5.0
 }]
-[ext_resource type="Script" uid="uid://b6jv5mwtaerr3" path="res://sort_timer.gd" id="4_mx8sn"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
@@ -134,8 +132,8 @@ offset_bottom = 616.0
 script = ExtResource("4_mx8sn")
 
 [node name="DeathScreen" type="AnimatedSprite2D" parent="TimerLabel"]
-position = Vector2(292, 301)
-scale = Vector2(1.8025078, 1.3583333)
+position = Vector2(531.5, -271.99997)
+scale = Vector2(1.8949842, 1.4374999)
 sprite_frames = SubResource("SpriteFrames_cr74b")
 animation = &"gif_animation"
 
