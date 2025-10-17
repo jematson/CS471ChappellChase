@@ -68,6 +68,7 @@ var levels = {
 @onready var label = $LevelLabel
 @onready var thedisplay = executor.display
 
+
 func _ready():
 	# Initialize large random list for level 2
 	for i in range(40):
@@ -99,7 +100,7 @@ func new_level():
 	level_number += 1
 	if level_number > levels.size():
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-	else :
+	else:
 		print("New level: ", level_number)
 		label.text = "Level " + str(level_number)
 		executor.reset()

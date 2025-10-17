@@ -10,6 +10,7 @@ var indices = []
 
 signal display_sorted
 
+
 func empty():
 	current_stairs = []
 	indices = []
@@ -52,10 +53,9 @@ func update_stair_positions(new_stairs):
 				break
 
 
-
 func check_display():
 	await get_tree().process_frame
-	while(true):
+	while true:
 		var sorted = true
 		for stair in current_stairs:
 			if stair.position.x != indices[stair.value - 1][1]:
