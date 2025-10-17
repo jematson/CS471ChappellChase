@@ -1,9 +1,97 @@
-[gd_scene load_steps=5 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=26 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-[ext_resource type="Script" uid="uid://qrubdkt5g00h" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
-[ext_resource type="Script" uid="uid://daxgiemmru00h" path="res://sort_timer.gd" id="4_mx8sn"]
+[ext_resource type="Script" uid="uid://dx1caorfod2v5" path="res://sort_timer.gd" id="4_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://cb4ptbniqi3dk" path="res://sprites/frame_00_delay-0.04s.png" id="5_wu01b"]
+[ext_resource type="Texture2D" uid="uid://bh5aupnm0huvn" path="res://sprites/frame_01_delay-0.04s.png" id="6_3ies3"]
+[ext_resource type="Texture2D" uid="uid://bk5l4iywtxsbl" path="res://sprites/frame_02_delay-0.05s.png" id="7_xy2fk"]
+[ext_resource type="Texture2D" uid="uid://b8bdqqvdmca7" path="res://sprites/frame_03_delay-0.04s.png" id="8_cmcjb"]
+[ext_resource type="Texture2D" uid="uid://djj8f7o5ental" path="res://sprites/frame_04_delay-0.04s.png" id="9_556r4"]
+[ext_resource type="Texture2D" uid="uid://y7l8a00uewp1" path="res://sprites/frame_05_delay-0.04s.png" id="10_7agi7"]
+[ext_resource type="Texture2D" uid="uid://b0x7vkx1ec1xi" path="res://sprites/frame_06_delay-0.04s.png" id="11_kih21"]
+[ext_resource type="Texture2D" uid="uid://bn3s0xslgg5gx" path="res://sprites/frame_07_delay-0.04s.png" id="12_w3o6u"]
+[ext_resource type="Texture2D" uid="uid://dl4txeu4dm6bw" path="res://sprites/frame_08_delay-0.05s.png" id="13_2e2fo"]
+[ext_resource type="Texture2D" uid="uid://cou1ryuv3xkp0" path="res://sprites/frame_09_delay-0.04s.png" id="14_gur6y"]
+[ext_resource type="Texture2D" uid="uid://c8x83osbtl7kv" path="res://sprites/frame_10_delay-0.04s.png" id="15_v3why"]
+[ext_resource type="Texture2D" uid="uid://dtjd2agcd1pun" path="res://sprites/frame_11_delay-0.04s.png" id="16_asl66"]
+[ext_resource type="Texture2D" uid="uid://bve0qg1xrlei6" path="res://sprites/frame_12_delay-0.04s.png" id="17_2jdvr"]
+[ext_resource type="Texture2D" uid="uid://dwd2e1be5y56w" path="res://sprites/frame_13_delay-0.04s.png" id="18_q4oe8"]
+[ext_resource type="Texture2D" uid="uid://buehkylqfx0sk" path="res://sprites/frame_14_delay-0.05s.png" id="19_svjb4"]
+[ext_resource type="Texture2D" uid="uid://cxt5ltudfekoa" path="res://sprites/frame_15_delay-0.04s.png" id="20_c1pbi"]
+[ext_resource type="Texture2D" uid="uid://bk63kdlpu1ya1" path="res://sprites/frame_16_delay-0.04s.png" id="21_535f6"]
+[ext_resource type="Texture2D" uid="uid://b7xa60wg0vfxs" path="res://sprites/frame_17_delay-0.04s.png" id="22_50fbu"]
+[ext_resource type="Texture2D" uid="uid://cwxre38buu470" path="res://sprites/frame_18_delay-0.04s.png" id="23_0fmhk"]
+[ext_resource type="Texture2D" uid="uid://ctqyv5eaiq8vu" path="res://sprites/frame_19_delay-0.04s.png" id="24_iafhg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cr74b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wu01b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3ies3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xy2fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cmcjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_556r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7agi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kih21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w3o6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2e2fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gur6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v3why")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_asl66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2jdvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q4oe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_svjb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c1pbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_535f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_50fbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0fmhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_iafhg")
+}],
+"loop": true,
+"name": &"gif_animation",
+"speed": 5.0
+}]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
@@ -33,4 +121,11 @@ offset_right = 325.0
 offset_bottom = 46.0
 script = ExtResource("4_mx8sn")
 
+[node name="DeathScreen" type="AnimatedSprite2D" parent="TimerLabel"]
+position = Vector2(292, 301)
+scale = Vector2(1.8025078, 1.3583333)
+sprite_frames = SubResource("SpriteFrames_cr74b")
+animation = &"gif_animation"
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="animation_looped" from="TimerLabel/DeathScreen" to="TimerLabel" method="_on_death_screen_animation_looped"]
