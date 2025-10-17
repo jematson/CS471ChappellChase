@@ -1,5 +1,5 @@
-extends ColorRect
 class_name StairRect
+extends ColorRect
 
 var value: int
 var target_index: int = 0

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ChappellChase"
-run/main_scene="uid://df2qqsnyycbb4"
+run/main_scene="uid://mnqockvn8flx"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

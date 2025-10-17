@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=27 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://scenes/chappellbasement.png" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
 [ext_resource type="Script" uid="uid://dx1caorfod2v5" path="res://sort_timer.gd" id="4_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://cb4ptbniqi3dk" path="res://sprites/frame_00_delay-0.04s.png" id="5_wu01b"]
@@ -96,34 +97,43 @@ animations = [{
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -25.0
+offset_top = -21.0
+offset_right = 1185.0
+offset_bottom = 665.0
+texture = ExtResource("2_ppgk2")
+
 [node name="AlgorithmExecuter" parent="." instance=ExtResource("3_w8frs")]
 
 [node name="AlgorithmMenu" parent="." instance=ExtResource("1_2q6dc")]
 
 [node name="MenuButton" type="Button" parent="."]
-offset_left = 6.0
-offset_top = 610.0
-offset_right = 59.0
-offset_bottom = 641.0
-text = "Menu"
+offset_left = 14.0
+offset_top = 165.0
+offset_right = 118.0
+offset_bottom = 281.0
+text = "Return
+to
+Menu"
 
 [node name="LevelLabel" type="Label" parent="."]
-offset_left = 681.0
-offset_top = 23.0
-offset_right = 735.0
-offset_bottom = 46.0
+offset_left = 44.0
+offset_top = 545.0
+offset_right = 98.0
+offset_bottom = 568.0
 text = "Level 0"
 
 [node name="TimerLabel" type="Label" parent="."]
-offset_left = 285.0
-offset_top = 23.0
-offset_right = 325.0
-offset_bottom = 46.0
+offset_left = 49.0
+offset_top = 593.0
+offset_right = 89.0
+offset_bottom = 616.0
 script = ExtResource("4_mx8sn")
 
 [node name="DeathScreen" type="AnimatedSprite2D" parent="TimerLabel"]
-position = Vector2(292, 301)
-scale = Vector2(1.8025078, 1.3583333)
+position = Vector2(531.5, -271.99997)
+scale = Vector2(1.8949842, 1.4374999)
 sprite_frames = SubResource("SpriteFrames_cr74b")
 animation = &"gif_animation"
 
