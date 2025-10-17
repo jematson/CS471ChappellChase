@@ -57,10 +57,7 @@ func call_quicksort():
 func call_insertionsort():
 	sort_timer.start_timer()
 	await InsertionSort.insertion_sort(
-		stair_heights,
-		func(array: Array): display.update_stair_positions(array),
-		func(array: Array, i, j): swap(array, i, j),
-		self
+		stair_heights, func(array: Array): display.update_stair_positions(array), self
 	)
 	emit_signal("sorted")
 	sort_timer.stop_timer()
