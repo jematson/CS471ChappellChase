@@ -1,14 +1,15 @@
 extends Node2D
 
+signal display_sorted
+
 var current_stairs = []
 var indices = []
+
 @onready var background: ColorRect = $BG
 @onready var bg_position = background.position
 @onready var bg_height = background.size[1]
 @onready var bg_width = background.size[0]
 @onready var bottom_floor = bg_position[1] + bg_height - 10
-
-signal display_sorted
 
 
 func empty():
