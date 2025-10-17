@@ -8,6 +8,7 @@ var indices = []
 @onready var bg_width = background.size[0]
 @onready var bottom_floor = bg_position[1] + bg_height - 10
 
+signal display_sorted
 
 func empty():
 	current_stairs = []
@@ -49,3 +50,18 @@ func update_stair_positions(new_stairs):
 				var target_y = bottom_floor - stair.height
 				stair.target_pos = Vector2(target_x, target_y)
 				break
+
+
+
+func check_display():
+	await get_tree().process_frame
+	while(true):
+		var sorted = true
+		for stair in current_stairs:
+			if stair.position.x != indices[stair.value - 1][1]:
+				sorted = false
+				break
+		if sorted:
+			emit_signal("display_sorted")
+			break
+		await get_tree().process_frame

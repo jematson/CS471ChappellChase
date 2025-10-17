@@ -66,7 +66,7 @@ var levels = {
 @onready var executor = $AlgorithmExecuter
 @onready var button = $AlgorithmMenu
 @onready var label = $LevelLabel
-
+@onready var thedisplay = executor.display
 
 func _ready():
 	# Initialize large random list for level 2
@@ -77,7 +77,8 @@ func _ready():
 	label.text = "Level " + str(level_number)
 	stair_start = levels[1][0]
 	algorithm_options = levels[1][1]
-	executor.sorted.connect(self.new_level)
+	executor.algorithm_done.connect(thedisplay.check_display)
+	thedisplay.display_sorted.connect(self.new_level)
 	button.shuffle.connect(executor.shuffle_stairs)
 	button.bubble.connect(executor.bubble_sort)
 	button.quick.connect(executor.call_quicksort)
@@ -94,13 +95,15 @@ func _on_menu_button_pressed() -> void:
 
 
 func new_level():
+	await get_tree().create_timer(2).timeout
 	level_number += 1
 	if level_number > levels.size():
-		level_number = 1
-	print("New level: ", level_number)
-	label.text = "Level " + str(level_number)
-	executor.reset()
-	stair_start = levels[level_number][0]
-	algorithm_options = levels[level_number][1]
-	button.button_options(algorithm_options)
-	executor.initialize_stairs(stair_start.size(), stair_start)
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	else :
+		print("New level: ", level_number)
+		label.text = "Level " + str(level_number)
+		executor.reset()
+		stair_start = levels[level_number][0]
+		algorithm_options = levels[level_number][1]
+		button.button_options(algorithm_options)
+		executor.initialize_stairs(stair_start.size(), stair_start)
