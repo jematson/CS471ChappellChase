@@ -132,6 +132,7 @@ offset_bottom = 616.0
 script = ExtResource("4_mx8sn")
 
 [node name="DeathScreen" type="AnimatedSprite2D" parent="TimerLabel"]
+visible = false
 position = Vector2(531.5, -271.99997)
 scale = Vector2(1.8949842, 1.4374999)
 sprite_frames = SubResource("SpriteFrames_cr74b")
