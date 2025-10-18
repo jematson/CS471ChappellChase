@@ -1,12 +1,14 @@
 extends Node2D
 
 #var num_stairs = 15
-var stair_start = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-var algorithm_options = ["BubbleSortButton",
-						"MergeSortButton",
-						"InsertionSortButton",
-						"QuickSortButton",
-						"SelectionSortButton"]
+var stair_start = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+var algorithm_options = [
+	"BubbleSortButton",
+	"MergeSortButton",
+	"InsertionSortButton",
+	"QuickSortButton",
+	"SelectionSortButton"
+]
 
 @onready var executor = $AlgorithmExecuter
 @onready var button = $AlgorithmMenu
@@ -42,7 +44,7 @@ func _on_shuffle_button_pressed() -> void:
 func _on_large_button_pressed() -> void:
 	if stair_start.size() != 50:
 		stair_start = []
-		for i in range (1, 51):
+		for i in range(1, 51):
 			stair_start.append(i)
 		executor.reset()
 		executor.initialize_stairs(stair_start.size(), stair_start)
@@ -51,7 +53,7 @@ func _on_large_button_pressed() -> void:
 func _on_small_button_pressed() -> void:
 	if stair_start.size() != 15:
 		stair_start = []
-		for i in range (1, 16):
+		for i in range(1, 16):
 			stair_start.append(i)
 		executor.reset()
 		executor.initialize_stairs(stair_start.size(), stair_start)
