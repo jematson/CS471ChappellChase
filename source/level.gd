@@ -36,7 +36,7 @@ var levels = {
 	[
 		[],
 		[  # Correct: QuickSort
-			"BubbleSortButton",
+			"BogoSortButton",
 			"QuickSortButton",
 			"SelectionSortButton",
 		],
@@ -56,7 +56,7 @@ var levels = {
 			10,
 		],
 		[  # Correct: BubbleSort
-			"SelectionSortButton",
+			"BogoSortButton",
 			"MergeSortButton",
 			"BubbleSortButton",
 		],
