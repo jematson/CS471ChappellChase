@@ -6,7 +6,6 @@ signal quick
 signal insert
 signal selection
 signal merge
-signal bogo
 
 @onready var button_box = $HBoxContainer
 
@@ -41,8 +40,3 @@ func _on_selection_sort_button_pressed() -> void:
 
 func _on_mergesort_button_pressed() -> void:
 	emit_signal("merge")
-
-
-func _on_bogo_sort_button_pressed() -> void:
-	print("Bogo signal")
-	emit_signal("bogo")
