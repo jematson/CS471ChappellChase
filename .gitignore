@@ -5,3 +5,4 @@
 scenes/*.tmp
 // ignores Visual Studio Code specific settings
 .vscode/
+.venv/
