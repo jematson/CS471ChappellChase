@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://qrubdkt5g00h" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
-[ext_resource type="Script" uid="uid://daxgiemmru00h" path="res://sort_timer.gd" id="4_mx8sn"]
+[ext_resource type="Script" path="res://source/sort_timer.gd" id="4_mx8sn"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
