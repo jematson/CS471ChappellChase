@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c84hilvcwcvgs"]
 
-[ext_resource type="Script" uid="uid://cmyvtcbni7lgt" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
+[ext_resource type="Script" uid="uid://dv7l6s7e77h3a" path="res://source/algorithm_menu.gd" id="1_hi5xi"]
 
 [node name="AlgorithmMenu" type="Node2D"]
 script = ExtResource("1_hi5xi")
@@ -18,8 +18,8 @@ text = "Shuffle
 [node name="HBoxContainer" type="HFlowContainer" parent="."]
 offset_left = 503.0
 offset_top = 562.0
-offset_right = 969.0
-offset_bottom = 643.0
+offset_right = 1080.0
+offset_bottom = 604.0
 alignment = 1
 
 [node name="BubbleSortButton" type="Button" parent="HBoxContainer"]
