@@ -21,6 +21,7 @@ func _ready():
 	# Initialize large random list for level 2
 
 	label.text = "Practice Mode"
+	executor.is_practice = true
 	executor.algorithm_done.connect(thedisplay.check_display)
 	#thedisplay.display_sorted.connect(self.new_level)
 	button.shuffle.connect(executor.shuffle_stairs)

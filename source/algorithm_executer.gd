@@ -7,6 +7,7 @@ const MergeSort = preload("res://source/merge_sort.gd")
 const SelectionSort = preload("res://source/selection_sort.gd")
 var num_stairs = 15
 var stair_heights = []
+var is_practice = false
 
 @onready var display = $StairDisplay
 @onready var sort_timer = $"../TimerLabel"
@@ -31,7 +32,8 @@ func shuffle_stairs():
 
 
 func bubble_sort():
-	sort_timer.start_timer()
+	if !is_practice:
+		sort_timer.start_timer()
 	var n = stair_heights.size()
 	for i in range(n - 1):
 		for j in range(n - i - 1):
@@ -44,32 +46,39 @@ func bubble_sort():
 
 				await get_tree().create_timer(0.3).timeout
 	emit_signal("algorithm_done")
-	sort_timer.stop_timer()
+	if !is_practice:
+		sort_timer.stop_timer()
 
 
 func call_quicksort():
-	sort_timer.start_timer()
+	if !is_practice:
+		sort_timer.start_timer()
 	quicksort(stair_heights, 0, stair_heights.size() - 1)
 	emit_signal("algorithm_done")
-	sort_timer.stop_timer()
+	if !is_practice:
+		sort_timer.stop_timer()
 
 
 func call_insertionsort():
-	sort_timer.start_timer()
+	if !is_practice:
+		sort_timer.start_timer()
 	await InsertionSort.insertion_sort(
 		stair_heights, func(array: Array): display.update_stair_positions(array), self
 	)
 	emit_signal("algorithm_done")
-	sort_timer.stop_timer()
+	if !is_practice:
+		sort_timer.stop_timer()
 
 
 func call_selectionsort():
-	sort_timer.start_timer()
+	if !is_practice:
+		sort_timer.start_timer()
 	await SelectionSort.selection_sort(
 		stair_heights, func(array: Array, i, j): swap(array, i, j), self
 	)
 	emit_signal("algorithm_done")
-	sort_timer.stop_timer()
+	if !is_practice:
+		sort_timer.stop_timer()
 
 
 func partition(array, low, high):
@@ -86,12 +95,14 @@ func partition(array, low, high):
 
 
 func call_merge_sort():
-	sort_timer.start_timer()
+	if !is_practice:
+		sort_timer.start_timer()
 	await MergeSort.merge_sort(
 		stair_heights, func(array: Array): display.update_stair_positions(array), self
 	)
 	emit_signal("algorithm_done")
-	sort_timer.stop_timer()
+	if !is_practice:
+		sort_timer.stop_timer()
 
 
 func swap(array, i, j):
@@ -112,7 +123,8 @@ func quicksort(array, low, high):
 
 
 func call_bogo_sort():
-	sort_timer.start_timer()
+	if !is_practice:
+		sort_timer.start_timer()
 	while true:
 		await get_tree().create_timer(1.2).timeout
 		await get_tree().process_frame
@@ -123,5 +135,6 @@ func call_bogo_sort():
 			if stair_heights[index] != (index + 1):
 				sorted = false
 		if sorted:
-			sort_timer.stop_timer()
+			if !is_practice:
+				sort_timer.stop_timer()
 			break
