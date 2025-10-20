@@ -9,7 +9,7 @@ var indices = []
 @onready var bg_position = background.position
 @onready var bg_height = background.size[1]
 @onready var bg_width = background.size[0]
-@onready var bottom_floor = bg_position[1] + bg_height - 10
+@onready var bottom_floor = bg_position[1] + bg_height - 50
 
 
 func empty():

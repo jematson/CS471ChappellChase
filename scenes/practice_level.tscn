@@ -1,10 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://bytv0a4eoqjw2"]
+[gd_scene load_steps=27 format=3 uid="uid://nw4erm8gqky6"]
 
-[ext_resource type="Script" uid="uid://c4e021dnq3urm" path="res://source/practice_level.gd" id="1_mywij"]
-[ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://scenes/chappellbasement.png" id="2_7elij"]
+[ext_resource type="Script" uid="uid://c564w2bpx7ukl" path="res://source/practice_level.gd" id="1_mywij"]
+[ext_resource type="Texture2D" uid="uid://chroruch1fd6o" path="res://source/practicemode.png" id="2_mywij"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_25emc"]
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="4_qh7p1"]
-[ext_resource type="Script" uid="uid://dx1caorfod2v5" path="res://sort_timer.gd" id="5_nsrdn"]
+[ext_resource type="Script" uid="uid://072ts06p8gbv" path="res://sort_timer.gd" id="5_nsrdn"]
 [ext_resource type="Texture2D" uid="uid://cb4ptbniqi3dk" path="res://sprites/frame_00_delay-0.04s.png" id="6_keyi3"]
 [ext_resource type="Texture2D" uid="uid://bh5aupnm0huvn" path="res://sprites/frame_01_delay-0.04s.png" id="7_2ufi1"]
 [ext_resource type="Texture2D" uid="uid://bk5l4iywtxsbl" path="res://sprites/frame_02_delay-0.05s.png" id="8_tgikd"]
@@ -98,51 +98,50 @@ animations = [{
 script = ExtResource("1_mywij")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -25.0
-offset_top = -21.0
-offset_right = 1185.0
-offset_bottom = 665.0
-texture = ExtResource("2_7elij")
+offset_left = -13.0
+offset_top = -18.0
+offset_right = 1174.0
+offset_bottom = 666.0
+texture = ExtResource("2_mywij")
 
 [node name="AlgorithmExecuter" parent="." instance=ExtResource("3_25emc")]
 
 [node name="AlgorithmMenu" parent="." instance=ExtResource("4_qh7p1")]
+position = Vector2(-83, 3)
 
 [node name="MenuButton" type="Button" parent="."]
-offset_left = 14.0
-offset_top = 165.0
-offset_right = 118.0
-offset_bottom = 281.0
-text = "Return
-to
-Menu"
+offset_left = 67.0
+offset_top = 160.0
+offset_right = 198.0
+offset_bottom = 215.0
+text = "Main Menu"
 
 [node name="ShuffleButton" type="Button" parent="."]
-offset_left = 29.0
-offset_top = 577.0
-offset_right = 117.0
-offset_bottom = 608.0
+offset_left = 87.0
+offset_top = 319.0
+offset_right = 175.0
+offset_bottom = 350.0
 text = "Shuffle"
 
 [node name="LargeButton" type="Button" parent="."]
-offset_left = 269.0
-offset_top = 578.0
-offset_right = 390.0
-offset_bottom = 609.0
+offset_left = 75.0
+offset_top = 540.0
+offset_right = 196.0
+offset_bottom = 571.0
 text = "Large Data Set"
 
 [node name="SmallButton" type="Button" parent="."]
-offset_left = 131.0
-offset_top = 578.0
-offset_right = 251.0
-offset_bottom = 609.0
+offset_left = 74.0
+offset_top = 466.0
+offset_right = 194.0
+offset_bottom = 497.0
 text = "Small Data Set"
 
 [node name="LevelLabel" type="Label" parent="."]
-offset_left = 44.0
-offset_top = 545.0
-offset_right = 98.0
-offset_bottom = 568.0
+offset_left = 71.0
+offset_top = 62.0
+offset_right = 125.0
+offset_bottom = 85.0
 text = "Level 0"
 
 [node name="TimerLabel" type="Label" parent="."]
