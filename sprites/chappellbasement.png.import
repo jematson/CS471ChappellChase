@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hb3vmjnnvvw0"
-path="res://.godot/imported/ccmainmenu.png-e4327ecea063c4f2e6014a85263aba16.ctex"
+uid="uid://d18elevb8e68q"
+path="res://.godot/imported/chappellbasement.png-c468a975c20a5c8ba482b9f1308af5e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/ccmainmenu.png"
-dest_files=["res://.godot/imported/ccmainmenu.png-e4327ecea063c4f2e6014a85263aba16.ctex"]
+source_file="res://sprites/chappellbasement.png"
+dest_files=["res://.godot/imported/chappellbasement.png-c468a975c20a5c8ba482b9f1308af5e1.ctex"]
 
 [params]
 

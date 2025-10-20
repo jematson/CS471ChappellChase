@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hb3vmjnnvvw0"
-path="res://.godot/imported/ccmainmenu.png-e4327ecea063c4f2e6014a85263aba16.ctex"
+uid="uid://d0xggvc4g1ha6"
+path="res://.godot/imported/practicemode.png-1127219e48c45a3f5616f6db1f26017a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/ccmainmenu.png"
-dest_files=["res://.godot/imported/ccmainmenu.png-e4327ecea063c4f2e6014a85263aba16.ctex"]
+source_file="res://sprites/practicemode.png"
+dest_files=["res://.godot/imported/practicemode.png-1127219e48c45a3f5616f6db1f26017a.ctex"]
 
 [params]
 

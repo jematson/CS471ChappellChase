@@ -1,12 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=10 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-[ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
-[ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://scenes/chappellbasement.png" id="2_ppgk2"]
+[ext_resource type="Script" uid="uid://cxt0is7miim3d" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://sprites/chappellbasement.png" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
-[ext_resource type="Script" path="res://source/sort_timer.gd" id="4_mx8sn"]
+[ext_resource type="Script" uid="uid://555auxf4tf0q" path="res://source/sort_timer.gd" id="4_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://f410gbdpvtj0" path="res://sprites/paul.png" id="5_ppgk2"]
-[ext_resource type="Script" uid="uid://1x5bjln0h2ss" path="res://source/hamster.gd" id="6_2r41h"]
+[ext_resource type="Script" uid="uid://dinmoji1uotw2" path="res://source/hamster.gd" id="6_2r41h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_klq6b"]
 
@@ -55,12 +55,11 @@ script = ExtResource("4_mx8sn")
 [node name="HamsterGoal" type="Node2D" parent="."]
 position = Vector2(1084, 89)
 
-[node name="Hamster" type="CharacterBody2D" parent="." node_paths=PackedStringArray("goal", "startPos")]
+[node name="Hamster" type="CharacterBody2D" parent="." node_paths=PackedStringArray("goal")]
 position = Vector2(167, 455)
 script = ExtResource("6_2r41h")
 speed = 400
 goal = NodePath("../HamsterGoal")
-startPos = NodePath("../StartPos")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Hamster"]
 debug_enabled = true
@@ -77,5 +76,6 @@ navigation_polygon = SubResource("NavigationPolygon_2r41h")
 [node name="StartPos" type="Node2D" parent="."]
 position = Vector2(167, 455)
 
+[node name="$DeathScreen" type="AnimatedSprite2D" parent="."]
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="animation_looped" from="TimerLabel/DeathScreen" to="TimerLabel" method="_on_death_screen_animation_looped"]
