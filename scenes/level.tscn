@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=9 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://qrubdkt5g00h" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
 [ext_resource type="Script" path="res://source/sort_timer.gd" id="4_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://f410gbdpvtj0" path="res://sprites/paul.png" id="5_ppgk2"]
+[ext_resource type="Script" uid="uid://1x5bjln0h2ss" path="res://source/hamster.gd" id="6_2r41h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_klq6b"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2r41h"]
+vertices = PackedVector2Array(435.6875, 417.9297, 1107.0625, 48.867188, 1108.9531, 528.84375, 355.4375, 419.9922, 115.71875, 514.14844, 280.72656, 424.03125, 123.25, 407.04688)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4, 5), PackedInt32Array(5, 4, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(114, 396, 281, 414, 355, 410, 433, 408, 1117, 32, 1119, 539, 105, 524)])
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
@@ -32,5 +41,29 @@ offset_top = 23.0
 offset_right = 325.0
 offset_bottom = 46.0
 script = ExtResource("4_mx8sn")
+
+[node name="HamsterGoal" type="Node2D" parent="."]
+position = Vector2(1084, 89)
+
+[node name="Hamster" type="CharacterBody2D" parent="." node_paths=PackedStringArray("goal", "startPos")]
+position = Vector2(167, 455)
+script = ExtResource("6_2r41h")
+goal = NodePath("../HamsterGoal")
+startPos = NodePath("../StartPos")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Hamster"]
+debug_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Hamster"]
+texture = ExtResource("5_ppgk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hamster"]
+shape = SubResource("CapsuleShape2D_klq6b")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_2r41h")
+
+[node name="StartPos" type="Node2D" parent="."]
+position = Vector2(167, 455)
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
