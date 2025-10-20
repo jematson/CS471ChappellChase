@@ -25,7 +25,7 @@ func makepath() -> void:
 	nav_agent.target_position = goal.global_position
 
 func start() -> void:
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.5).timeout
 	readytostart = true
 
 func reached_goal() -> void:
