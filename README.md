@@ -7,9 +7,9 @@ ChappellChase is a sorting algorithm studying game. You play as a hampster escap
 
 ## Play the Game
 
-1. Go to the `build` folder and then the folder corresponding to your operating system.
+1. Go to the `Initial Release` tab on the right.
 
-2. Download the executable file.
+2. Download the appropriate executable file for your os.
 
 3. Play and enjoy!
 
