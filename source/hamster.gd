@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed = 300
 
 @export var goal: Node2D
-@export var startPos: Node2D
 @onready var executer = $"../AlgorithmExecuter"
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 var readytostart = false
@@ -15,7 +14,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if readytostart:
-		if !nav_agent.is_target_reached():
+		if !(is_zero_approx(nav_agent.distance_to_target())):
 			var dir = to_local(nav_agent.get_next_path_position()).normalized()
 			self.velocity = dir * speed
 			self.move_and_slide()
@@ -26,8 +25,8 @@ func makepath() -> void:
 	nav_agent.target_position = goal.global_position
 
 func start() -> void:
+	await get_tree().create_timer(1).timeout
 	readytostart = true
 
 func reached_goal() -> void:
-	self.global_position = startPos.global_position
-	readytostart = false
+	queue_free()

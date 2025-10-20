@@ -108,3 +108,8 @@ func new_level():
 		algorithm_options = levels[level_number][1]
 		button.button_options(algorithm_options)
 		executor.initialize_stairs(stair_start.size(), stair_start)
+		var scene = load("res://scenes/hamster.tscn")
+		var hampter = scene.instantiate()
+		hampter.goal = $HamsterGoal
+		hampter.global_position = $StartPos.global_position
+		add_child(hampter)

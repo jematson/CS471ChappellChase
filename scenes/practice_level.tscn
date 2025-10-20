@@ -1,10 +1,10 @@
 [gd_scene load_steps=27 format=3 uid="uid://nw4erm8gqky6"]
 
-[ext_resource type="Script" uid="uid://c564w2bpx7ukl" path="res://source/practice_level.gd" id="1_mywij"]
-[ext_resource type="Texture2D" uid="uid://chroruch1fd6o" path="res://source/practicemode.png" id="2_mywij"]
+[ext_resource type="Script" uid="uid://dw8gxbi0q5fqy" path="res://source/practice_level.gd" id="1_mywij"]
+[ext_resource type="Texture2D" uid="uid://cale5ny7y17vl" path="res://sprites/practicemode.png" id="2_mywij"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_25emc"]
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="4_qh7p1"]
-[ext_resource type="Script" uid="uid://072ts06p8gbv" path="res://sort_timer.gd" id="5_nsrdn"]
+[ext_resource type="Script" path="res://sort_timer.gd" id="5_nsrdn"]
 [ext_resource type="Texture2D" uid="uid://cb4ptbniqi3dk" path="res://sprites/frame_00_delay-0.04s.png" id="6_keyi3"]
 [ext_resource type="Texture2D" uid="uid://bh5aupnm0huvn" path="res://sprites/frame_01_delay-0.04s.png" id="7_2ufi1"]
 [ext_resource type="Texture2D" uid="uid://bk5l4iywtxsbl" path="res://sprites/frame_02_delay-0.05s.png" id="8_tgikd"]
