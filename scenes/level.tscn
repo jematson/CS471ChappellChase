@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://b7xa60wg0vfxs" path="res://sprites/frame_17_delay-0.04s.png" id="23_cr74b"]
 [ext_resource type="Texture2D" uid="uid://cwxre38buu470" path="res://sprites/frame_18_delay-0.04s.png" id="24_uhfbm"]
 [ext_resource type="Texture2D" uid="uid://ctqyv5eaiq8vu" path="res://sprites/frame_19_delay-0.04s.png" id="25_lqb7q"]
+[ext_resource type="Texture2D" uid="uid://c3h28e0ux4p1y" path="res://sprites/victory_royal.jpg" id="26_xy2fk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ok3ci"]
 animations = [{
