@@ -48,6 +48,7 @@ position = Vector2(1084, 89)
 [node name="Hamster" type="CharacterBody2D" parent="." node_paths=PackedStringArray("goal", "startPos")]
 position = Vector2(167, 455)
 script = ExtResource("6_2r41h")
+speed = 400
 goal = NodePath("../HamsterGoal")
 startPos = NodePath("../StartPos")
 

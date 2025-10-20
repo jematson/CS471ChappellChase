@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 200
+@export var speed = 300
 
 @export var goal: Node2D
 @export var startPos: Node2D

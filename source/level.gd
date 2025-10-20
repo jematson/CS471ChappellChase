@@ -95,7 +95,7 @@ func _on_menu_button_pressed() -> void:
 
 
 func new_level():
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(3).timeout
 	level_number += 1
 	if level_number > levels.size():
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
