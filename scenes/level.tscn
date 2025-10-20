@@ -1,12 +1,12 @@
-[gd_scene load_steps=32 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=34 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
-[ext_resource type="Script" uid="uid://cxt0is7miim3d" path="res://source/level.gd" id="1_w8frs"]
+[ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
 [ext_resource type="Texture2D" uid="uid://d18elevb8e68q" path="res://sprites/chappellbasement.png" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_w8frs"]
 [ext_resource type="Script" uid="uid://bgychph6laidn" path="res://source/sort_timer.gd" id="4_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://f410gbdpvtj0" path="res://sprites/paul.png" id="5_ppgk2"]
-[ext_resource type="Script" uid="uid://yltbulnoelh4" path="res://source/hamster.gd" id="6_2r41h"]
+[ext_resource type="Script" uid="uid://hxu5vuhwykvd" path="res://source/hamster.gd" id="6_2r41h"]
 [ext_resource type="Texture2D" uid="uid://cb4ptbniqi3dk" path="res://sprites/frame_00_delay-0.04s.png" id="6_cmcjb"]
 [ext_resource type="Texture2D" uid="uid://bh5aupnm0huvn" path="res://sprites/frame_01_delay-0.04s.png" id="7_556r4"]
 [ext_resource type="Texture2D" uid="uid://bk5l4iywtxsbl" path="res://sprites/frame_02_delay-0.05s.png" id="8_7agi7"]
@@ -93,7 +93,7 @@ animations = [{
 "texture": ExtResource("25_lqb7q")
 }],
 "loop": true,
-"name": &"default",
+"name": &"gif_animation",
 "speed": 5.0
 }]
 
@@ -107,6 +107,7 @@ outline_color = Color(0, 0, 0, 1)
 vertices = PackedVector2Array(1108.5, 528.84375, 129.4375, 514.35156, 162.64063, 482.40625, 244.60156, 469.8672, 293.5625, 461.53906, 350.95313, 426.6875, 1067.1719, 60.453125, 1085.7422, 50.953125)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 3, 4), PackedInt32Array(0, 4, 5, 6), PackedInt32Array(7, 0, 6)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(158, 473, 243, 460, 290, 452, 346, 418, 1095, 35, 1119, 539, 105, 524)])
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_cmcjb"]
 animations = [{
 "frames": [{
@@ -156,8 +157,10 @@ offset_bottom = 616.0
 script = ExtResource("4_mx8sn")
 
 [node name="DeathScreen" type="AnimatedSprite2D" parent="TimerLabel"]
-position = Vector2(-506, -298)
+position = Vector2(528, -270)
+scale = Vector2(1.8087775, 1.3541666)
 sprite_frames = SubResource("SpriteFrames_ok3ci")
+animation = &"gif_animation"
 
 [node name="HamsterGoal" type="Node2D" parent="."]
 position = Vector2(1064, 37)
