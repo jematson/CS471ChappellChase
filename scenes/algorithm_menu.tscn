@@ -44,9 +44,14 @@ text = "Merge Sort
 layout_mode = 2
 text = "Selection Sort"
 
+[node name="BogoSortButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Bogo Sort"
+
 [connection signal="pressed" from="ShuffleButton" to="." method="_on_shuffle_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/BubbleSortButton" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/QuickSortButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/InsertionSortButton" to="." method="_on_inssort_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/MergeSortButton" to="." method="_on_mergesort_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/SelectionSortButton" to="." method="_on_selection_sort_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BogoSortButton" to="." method="_on_bogo_sort_button_pressed"]
