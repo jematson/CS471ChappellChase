@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://hudyto286fs5" path="res://sprites/practicemode.png" id="2_mywij"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_25emc"]
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="4_qh7p1"]
-[ext_resource type="Script" path="res://sort_timer.gd" id="5_nsrdn"]
+[ext_resource type="Script" uid="uid://dyqdy5kv6m5u8" path="res://source/sort_timer.gd" id="5_mywij"]
 [ext_resource type="Texture2D" uid="uid://cb4ptbniqi3dk" path="res://sprites/frame_00_delay-0.04s.png" id="6_keyi3"]
 [ext_resource type="Texture2D" uid="uid://bh5aupnm0huvn" path="res://sprites/frame_01_delay-0.04s.png" id="7_2ufi1"]
 [ext_resource type="Texture2D" uid="uid://bk5l4iywtxsbl" path="res://sprites/frame_02_delay-0.05s.png" id="8_tgikd"]
@@ -150,7 +150,7 @@ offset_left = 49.0
 offset_top = 593.0
 offset_right = 89.0
 offset_bottom = 616.0
-script = ExtResource("5_nsrdn")
+script = ExtResource("5_mywij")
 
 [node name="DeathScreen" type="AnimatedSprite2D" parent="TimerLabel"]
 position = Vector2(531.5, -271.99997)
