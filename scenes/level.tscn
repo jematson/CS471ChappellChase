@@ -151,6 +151,7 @@ sprite_frames = SubResource("SpriteFrames_cr74b")
 animation = &"gif_animation"
 
 [node name="VictoryScreen" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(581.75, 320.49997)
 scale = Vector2(2.4347386, 3.3774507)
 sprite_frames = SubResource("SpriteFrames_cmcjb")
