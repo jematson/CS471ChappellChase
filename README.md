@@ -1,4 +1,16 @@
-# ChappellChase game for CS471
+# ChappellChase
+By Jenae Matson, Cleary Bettisworth, Ashley Moore-Schultz, and Ryland Sacker
+Created for the course CS471 Senior Capstone
+
+ChappellChase is a sorting algorithm studying game. You play as a hampster escaping a CS professor's basement, using sorting algorithms to put stairs back into a climbable order, ideally the fastest algorithm so as to escape faster. There is also a practice mode to see all the sorting algorithms in action.
+
+## Play the Game
+
+1. Go to the `build` folder and then the folder corresponding to your operating system.
+
+2. Download the executable file.
+
+3. Play and enjoy!
 
 ## How To Start Contributing to Development
 
