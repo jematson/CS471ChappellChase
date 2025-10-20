@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://nw4erm8gqky6"]
 
-[ext_resource type="Script" uid="uid://dw8gxbi0q5fqy" path="res://source/practice_level.gd" id="1_mywij"]
-[ext_resource type="Texture2D" uid="uid://cale5ny7y17vl" path="res://sprites/practicemode.png" id="2_mywij"]
+[ext_resource type="Script" uid="uid://c564w2bpx7ukl" path="res://source/practice_level.gd" id="1_mywij"]
+[ext_resource type="Texture2D" uid="uid://hudyto286fs5" path="res://sprites/practicemode.png" id="2_mywij"]
 [ext_resource type="PackedScene" uid="uid://crmsvxie0bwea" path="res://scenes/algorithm_executer.tscn" id="3_25emc"]
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="4_qh7p1"]
 [ext_resource type="Script" path="res://sort_timer.gd" id="5_nsrdn"]
