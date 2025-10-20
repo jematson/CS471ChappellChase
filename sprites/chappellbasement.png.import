@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0xggvc4g1ha6"
-path="res://.godot/imported/practicemode.png-61798e1b2dfaa4f6502c4e813a554ea6.ctex"
+uid="uid://d18elevb8e68q"
+path="res://.godot/imported/chappellbasement.png-c468a975c20a5c8ba482b9f1308af5e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/practicemode.png"
-dest_files=["res://.godot/imported/practicemode.png-61798e1b2dfaa4f6502c4e813a554ea6.ctex"]
+source_file="res://sprites/chappellbasement.png"
+dest_files=["res://.godot/imported/chappellbasement.png-c468a975c20a5c8ba482b9f1308af5e1.ctex"]
 
 [params]
 

@@ -9,7 +9,7 @@ var num_stairs = 15
 var stair_heights = []
 
 @onready var display = $StairDisplay
-@onready var sort_timer = get_node("../TimerLabel")
+@onready var sort_timer = $"../TimerLabel"
 
 
 func reset():

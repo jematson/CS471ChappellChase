@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d18elevb8e68q"
-path="res://.godot/imported/chappellbasement.png-4f9f69b9909339117cbdf134d7c4eec5.ctex"
+uid="uid://f410gbdpvtj0"
+path="res://.godot/imported/paul.png-ad973ab35a11529d0ad827b4915e2b4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/chappellbasement.png"
-dest_files=["res://.godot/imported/chappellbasement.png-4f9f69b9909339117cbdf134d7c4eec5.ctex"]
+source_file="res://sprites/paul.png"
+dest_files=["res://.godot/imported/paul.png-ad973ab35a11529d0ad827b4915e2b4e.ctex"]
 
 [params]
 

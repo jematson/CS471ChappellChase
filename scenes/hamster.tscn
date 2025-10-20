@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc21f1uxjxw6f"]
+
+[ext_resource type="Script" uid="uid://dinmoji1uotw2" path="res://source/hamster.gd" id="1_apgft"]
+[ext_resource type="Texture2D" uid="uid://f410gbdpvtj0" path="res://sprites/paul.png" id="2_tpwgc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_klq6b"]
+
+[node name="Hamster" type="CharacterBody2D" node_paths=PackedStringArray("goal", "startPos")]
+script = ExtResource("1_apgft")
+speed = 400
+goal = NodePath("")
+startPos = NodePath("")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tpwgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_klq6b")

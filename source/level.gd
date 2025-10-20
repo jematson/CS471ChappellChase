@@ -87,7 +87,6 @@ func _ready():
 	button.selection.connect(executor.call_selectionsort)
 	button.merge.connect(executor.call_merge_sort)
 	button.bogo.connect(executor.call_bogo_sort)
-
 	button.button_options(algorithm_options)
 	executor.initialize_stairs(stair_start.size(), stair_start)
 
@@ -97,7 +96,7 @@ func _on_menu_button_pressed() -> void:
 
 
 func new_level():
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(5).timeout
 	level_number += 1
 	if level_number > levels.size():
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
@@ -109,3 +108,8 @@ func new_level():
 		algorithm_options = levels[level_number][1]
 		button.button_options(algorithm_options)
 		executor.initialize_stairs(stair_start.size(), stair_start)
+		var scene = load("res://scenes/hamster.tscn")
+		var hampter = scene.instantiate()
+		hampter.goal = $HamsterGoal
+		hampter.global_position = $StartPos.global_position
+		add_child(hampter)
