@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://exm1vyysobw5"]
+[gd_scene load_steps=29 format=3 uid="uid://exm1vyysobw5"]
 
 [ext_resource type="PackedScene" uid="uid://c84hilvcwcvgs" path="res://scenes/algorithm_menu.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://t20icwr7cudf" path="res://source/level.gd" id="1_w8frs"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b7xa60wg0vfxs" path="res://sprites/frame_17_delay-0.04s.png" id="22_50fbu"]
 [ext_resource type="Texture2D" uid="uid://cwxre38buu470" path="res://sprites/frame_18_delay-0.04s.png" id="23_0fmhk"]
 [ext_resource type="Texture2D" uid="uid://ctqyv5eaiq8vu" path="res://sprites/frame_19_delay-0.04s.png" id="24_iafhg"]
+[ext_resource type="Texture2D" uid="uid://c3h28e0ux4p1y" path="res://sprites/victory_royal.jpg" id="26_xy2fk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cr74b"]
 animations = [{
@@ -94,6 +95,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmcjb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_xy2fk")
+}],
+"loop": true,
+"name": &"gif_animation",
+"speed": 0.3
+}]
+
 [node name="Level" type="Node2D"]
 script = ExtResource("1_w8frs")
 
@@ -138,5 +150,12 @@ scale = Vector2(1.8949842, 1.4374999)
 sprite_frames = SubResource("SpriteFrames_cr74b")
 animation = &"gif_animation"
 
+[node name="VictoryScreen" type="AnimatedSprite2D" parent="."]
+position = Vector2(581.75, 320.49997)
+scale = Vector2(2.4347386, 3.3774507)
+sprite_frames = SubResource("SpriteFrames_cmcjb")
+animation = &"gif_animation"
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="animation_looped" from="TimerLabel/DeathScreen" to="TimerLabel" method="_on_death_screen_animation_looped"]
+[connection signal="animation_looped" from="VictoryScreen" to="." method="_on_victory_screen_animation_looped"]
