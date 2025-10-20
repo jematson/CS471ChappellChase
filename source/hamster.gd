@@ -12,6 +12,7 @@ var readytostart = false
 func _ready() -> void:
 	executer.algorithm_done.connect(start)
 	nav_agent.target_reached.connect(reached_goal)
+	nav_agent.debug_enabled = false
 	makepath()
 
 
