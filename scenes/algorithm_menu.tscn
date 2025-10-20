@@ -6,19 +6,21 @@
 script = ExtResource("1_hi5xi")
 
 [node name="ShuffleButton" type="Button" parent="."]
+visible = false
 offset_left = 126.0
 offset_top = 87.0
 offset_right = 189.0
 offset_bottom = 118.0
+disabled = true
 text = "Shuffle
 "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 526.0
-offset_top = 559.0
-offset_right = 929.0
-offset_bottom = 590.0
-theme_override_constants/separation = 45
+[node name="HBoxContainer" type="HFlowContainer" parent="."]
+offset_left = 503.0
+offset_top = 562.0
+offset_right = 1080.0
+offset_bottom = 604.0
+alignment = 1
 
 [node name="BubbleSortButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -42,9 +44,14 @@ text = "Merge Sort
 layout_mode = 2
 text = "Selection Sort"
 
+[node name="BogoSortButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Bogo Sort"
+
 [connection signal="pressed" from="ShuffleButton" to="." method="_on_shuffle_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/BubbleSortButton" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/QuickSortButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/InsertionSortButton" to="." method="_on_inssort_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/MergeSortButton" to="." method="_on_mergesort_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/SelectionSortButton" to="." method="_on_selection_sort_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BogoSortButton" to="." method="_on_bogo_sort_button_pressed"]

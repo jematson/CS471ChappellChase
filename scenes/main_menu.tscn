@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://df2qqsnyycbb4"]
+[gd_scene load_steps=3 format=3 uid="uid://df2qqsnyycbb4"]
 
-[ext_resource type="Script" uid="uid://bofvk003c68ty" path="res://source/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://boa2mb8f83bev" path="res://source/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://btjdito1nbbhe" path="res://scenes/ccmainmenu.png" id="2_ekxnf"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,20 +12,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l6cm7")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -14.0
+offset_right = 1174.0
+offset_bottom = 669.0
+texture = ExtResource("2_ekxnf")
+
 [node name="GameButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 531.0
-offset_top = 298.0
-offset_right = 599.0
-offset_bottom = 329.0
+offset_left = 551.0
+offset_top = 378.0
+offset_right = 619.0
+offset_bottom = 409.0
 text = "Game"
 
 [node name="PracticeButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 508.0
-offset_top = 390.0
-offset_right = 626.0
-offset_bottom = 421.0
+offset_left = 528.0
+offset_top = 466.0
+offset_right = 646.0
+offset_bottom = 497.0
 text = "Practice Mode"
 
 [connection signal="pressed" from="GameButton" to="." method="_on_game_button_pressed"]

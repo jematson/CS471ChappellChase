@@ -36,7 +36,7 @@ var levels = {
 	[
 		[],
 		[  # Correct: QuickSort
-			"BubbleSortButton",
+			"BogoSortButton",
 			"QuickSortButton",
 			"SelectionSortButton",
 		],
@@ -56,7 +56,7 @@ var levels = {
 			10,
 		],
 		[  # Correct: BubbleSort
-			"SelectionSortButton",
+			"BogoSortButton",
 			"MergeSortButton",
 			"BubbleSortButton",
 		],
@@ -86,6 +86,7 @@ func _ready():
 	button.insert.connect(executor.call_insertionsort)
 	button.selection.connect(executor.call_selectionsort)
 	button.merge.connect(executor.call_merge_sort)
+	button.bogo.connect(executor.call_bogo_sort)
 	button.button_options(algorithm_options)
 	executor.initialize_stairs(stair_start.size(), stair_start)
 

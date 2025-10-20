@@ -6,4 +6,4 @@ func _on_game_button_pressed() -> void:
 
 
 func _on_practice_button_pressed() -> void:
-	print("Practice Mode button pressed")
+	get_tree().change_scene_to_file("res://scenes/practice_level.tscn")

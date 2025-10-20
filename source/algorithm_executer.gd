@@ -109,3 +109,19 @@ func quicksort(array, low, high):
 		quicksort(array, low, pivot_index - 1)
 
 		quicksort(array, pivot_index + 1, high)
+
+
+func call_bogo_sort():
+	sort_timer.start_timer()
+	while true:
+		await get_tree().create_timer(1.2).timeout
+		await get_tree().process_frame
+		stair_heights.shuffle()
+		display.update_stair_positions(stair_heights)
+		var sorted = true
+		for index in range(stair_heights.size()):
+			if stair_heights[index] != (index + 1):
+				sorted = false
+		if sorted:
+			sort_timer.stop_timer()
+			break
