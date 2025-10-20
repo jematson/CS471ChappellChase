@@ -158,7 +158,6 @@ speed = 400
 goal = NodePath("../HamsterGoal")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Hamster"]
-debug_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Hamster"]
 texture = ExtResource("5_ppgk2")
