@@ -1,16 +1,19 @@
 extends CharacterBody2D
 
 @export var speed = 300
-
 @export var goal: Node2D
+
+var readytostart = false
+
 @onready var executer = $"../AlgorithmExecuter"
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
-var readytostart = false
+
 
 func _ready() -> void:
 	executer.algorithm_done.connect(start)
 	nav_agent.target_reached.connect(reached_goal)
 	makepath()
+
 
 func _physics_process(_delta: float) -> void:
 	if readytostart:
@@ -21,12 +24,15 @@ func _physics_process(_delta: float) -> void:
 		else:
 			reached_goal()
 
+
 func makepath() -> void:
 	nav_agent.target_position = goal.global_position
+
 
 func start() -> void:
 	await get_tree().create_timer(2.5).timeout
 	readytostart = true
+
 
 func reached_goal() -> void:
 	queue_free()
