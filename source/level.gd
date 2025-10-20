@@ -5,6 +5,7 @@ var level_number = 1
 #var num_stairs = 15
 var stair_start = []
 var algorithm_options = []
+var victory_screen: AnimatedSprite2D
 
 var levels = {
 	1:
@@ -70,6 +71,8 @@ var levels = {
 
 
 func _ready():
+	victory_screen = $VictoryScreen
+	victory_screen.visible = false
 	# Initialize large random list for level 2
 	for i in range(40):
 		levels[2][0].append(i + 1)
@@ -99,7 +102,8 @@ func new_level():
 	await get_tree().create_timer(5).timeout
 	level_number += 1
 	if level_number > levels.size():
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		victory_screen.visible = true
+		victory_screen.play("gif_animation")
 	else:
 		print("New level: ", level_number)
 		label.text = "Level " + str(level_number)
@@ -113,3 +117,7 @@ func new_level():
 		hampter.goal = $HamsterGoal
 		hampter.global_position = $StartPos.global_position
 		add_child(hampter)
+
+
+func _on_victory_screen_animation_looped() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
